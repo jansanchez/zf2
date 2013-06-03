@@ -18,4 +18,9 @@ class IndexController extends AbstractActionController
     {
         return new ViewModel();
     }
+    public function saludoAction()
+    {
+    	$datos = array('msg' => 'Mi primer texto en ZF2');
+        return new ViewModel($datos);
+    }
 }
