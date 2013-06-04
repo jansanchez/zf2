@@ -1,0 +1,12 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/include/top-gec.jade
+	include jade/include/header.jade
+	
+	#wrapper
+		<?php echo $this->content; ?>
+
+	include jade/include/footer.jade
+
+	script(data-main="/js/main", src="/js/libs/require/require-min.js", type="text/javascript")

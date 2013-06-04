@@ -1,0 +1,37 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="es"> <![endif]-->
+<!--[if gt IE 8]> <html lang="es"> <![endif]-->
+head
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+	title #{page_title}
+	meta(name="title", content="#{page_title}")
+	meta(name="description", content="#{page_desc}")
+	meta(name="keywords", content="#{page_keywords}")
+	meta(name="author", content="#{page_name}")
+	meta(name="viewport", content="width=device-width")
+	meta(name="language", content="#{lang}")
+	meta(name="robots", content="index,follow")
+	meta(name="geo.region", content="PE-LIM")
+	meta(name="geo.placename", content="Cercado de Lima")
+	meta(name="geo.position", content="-12.0478;-77.0622")
+	meta(name="ICBM", content="-12.0478, -77.0622")	
+	meta(property="og:title", content="#{page_title}")
+	meta(property="og:description", content="#{page_desc}")
+	meta(property="og:image", content="#{page_img}")
+	link(href="#{page_img}", rel="image_src", type="image/jpeg")
+	link(href="#{page_fav}", rel="icon", type="image/vnd.microsoft.icon")
+	link(href="#{page_fav}", rel="shortcut icon", type="image/x-icon")
+	meta(name="DC.Title", content="#{page_title}")
+	meta(name="DC.Creator", content="#{page_name}")
+	meta(name="DC.Description", content="#{page_desc}")
+	meta(name="DC.Publisher", content="#{page_name}")
+	meta(name="DC.Contributor", content="#{developed}")
+	meta(name="DC.Language", content="#{lang}")
+	<!--[if lt IE 9]>
+	script(src="/js/libs/html5/html5.js")
+	<![endif]-->
+	link(type="text/css", href="/css/base.css", rel="stylesheet")
+	link(type="text/css", href="/css/rocio.css", rel="stylesheet")

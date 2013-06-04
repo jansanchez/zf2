@@ -1,0 +1,463 @@
+include ../../layout/jade/vars.jade
+
+.head-ads
+	h2.nofloat.font24 Publicar: Paso 2 - Llena los datos del aviso
+	span.text-detail Llena los datos de tu aviso				
+	ul.steps
+		li Escoge<br> el Aviso
+		li.act Datos<br> del Aviso
+		li Aviso<br>Impreso
+		li Verifica<br> tus datos
+.head-ads
+	h2 Datos de Aviso
+.box-white
+	.cgroup-inline
+		.control-group
+			label.control-label 
+				span.red* 
+				| Transacción:
+			.controls
+				select
+					option Venta
+					option Alquiler Turista
+		.control-group
+			label.control-label
+				span.red* 
+				| Localizado en:
+			.controls
+				select
+					option Ciudad
+					option Campo
+					option Playa
+		.control-group
+			label.control-label 
+				span.red* 
+				| Tipo de Inmueble:
+			.controls
+				select
+					option Casa
+					option Departamento
+					option Mini Departamento
+					option Terreno
+					option Oficina
+					option Tiendas o Locales
+		.control-group
+			label.control-label Moneda:
+			.controls
+				select.select-supermini
+					option Soles
+					option Departamento
+					option Departamento
+		.control-group
+			label.control-label
+				| Precio. 
+				span.textgray TC: S/.2.55
+			.controls
+				input(id="txtPrice", class="input-small", name="txtPrice", type="text")
+	.cgroup-inline
+		.control-group
+			label.control-label 
+				span.red* 
+				| Dormitorios:
+			.controls
+				select.select-medium
+					option 0
+					option 1
+					option 2
+		.control-group
+			label.control-label
+				span.red* 
+				| Baños:
+			.controls
+				select.select-medium
+					option 0
+					option 1
+					option 2
+		.control-group
+			label.control-label Medio Baño:
+			.controls
+				select.select-medium
+					option 0
+					option 1
+					option 2
+					option 3
+		.control-group
+			label.control-label Estacionamiento:
+			.controls
+				select.select-medium
+					option 0
+					option 1
+					option 2
+		.control-group
+			label.control-label Años de Antigüedad:
+			.controls
+				select.select-medium
+					option 0
+					option 1
+					option 2
+	.cgroup-inline
+		.control-group
+			label.control-label 
+				span.red* 
+				| Área Terreno:
+			.controls
+				input(id="txtAreaterreno", class="input-small", name="txtAreaterreno", type="text")
+				span.help-inline m2
+		.control-group
+			label.control-label
+				span.red* 
+				| Área Construida:
+			.controls
+				input(id="txtAreaconstruida", class="input-small", name="txtAreaconstruida", type="text")
+				span.help-inline m2
+	.cgroup-inline
+		.control-group
+			label.control-label 
+				span.red* 
+				| Teléfono de contacto 1:
+			.controls
+				input(id="txtPhone", class="input-standar", name="txtPhone", type="text")
+		.control-group
+			label.control-label Teléfono de contacto 1:
+			.controls
+				input(id="txtPhone", class="input-standar", name="txtPhone", type="text")
+	//-datos-turista-hidden
+	.box-hidden
+		.cgroup-inline
+			.control-group
+				label.control-label 
+					span.red* 
+					| Transacción:
+				.controls
+					select
+						option Venta
+						option Alquiler Turista
+			.control-group
+				label.control-label
+					span.red* 
+					| Localizado en:
+				.controls
+					select
+						option Ciudad
+						option Campo
+						option Playa
+			.control-group
+				label.control-label 
+					span.red* 
+					| Tipo de Inmueble:
+				.controls
+					select
+						option Casa
+						option Departamento
+						option Mini Departamento
+						option Terreno
+						option Oficina
+						option Tiendas o Locales
+		.cgroup-inline
+			.control-group
+				label.control-label
+					| Moneda: 
+					span.textgray TC: S/.2.55
+				.controls
+					select.select-small
+						option Soles
+						option Dolares
+						option Euros
+						option Libras
+			.control-group
+				label.control-label
+					| Alquiler Mensual:
+				.controls
+					input(id="txtMonthly", class="input-small", name="txtMonthly", type="text")
+			.control-group
+				label.control-label
+					| Alquiler Semanal:
+				.controls
+					input(id="txtWeekly", class="input-small", name="txtWeekly", type="text")
+			.control-group
+				label.control-label
+					| Alquiler Diario:
+				.controls
+					input(id="txtDaily", class="input-small", name="txtDaily", type="text")
+			.control-group
+				label.control-label
+					| Semana Santa:
+				.controls
+					input(id="txtStweek", class="input-small", name="txtStweek", type="text")
+			.control-group
+				label.control-label
+					| Año Nuevo:
+				.controls
+					input(id="txtNewyear", class="input-small", name="txtNewyear", type="text")
+		.cgroup-inline
+			.control-group
+				label.control-label 
+					span.red* 
+					| Dormitorios:
+				.controls
+					select.select-medium
+						option 0
+						option 1
+						option 2
+			.control-group
+				label.control-label
+					span.red* 
+					| Baños:
+				.controls
+					select.select-medium
+						option 0
+						option 1
+						option 2
+			.control-group
+				label.control-label Medio Baño:
+				.controls
+					select.select-medium
+						option 0
+						option 1
+						option 2
+						option 3
+			.control-group
+				label.control-label Estacionamiento:
+				.controls
+					select.select-medium
+						option 0
+						option 1
+						option 2
+			.control-group
+				label.control-label Años de Antigüedad:
+				.controls
+					select.select-medium
+						option 0
+						option 1
+						option 2
+		.cgroup-inline
+			.control-group
+				label.control-label 
+					span.red* 
+					| Área Terreno:
+				.controls
+					input(id="txtAreaterreno", class="input-small", name="txtAreaterreno", type="text")
+					span.help-inline m2
+			.control-group
+				label.control-label
+					span.red* 
+					| Área Construida:
+				.controls
+					input(id="txtAreaconstruida", class="input-small", name="txtAreaconstruida", type="text")
+					span.help-inline m2
+			.control-group
+				label.control-label Tipo Estadía:
+				.controls
+					select.select-medium
+						option Viajero
+						option 1
+						option 2
+			.control-group
+				label.control-label 
+					span.red* 
+					| Teléfono de contacto 1:
+				.controls
+					input(id="txtPhone", class="input-standar", name="txtPhone", type="text")
+			.control-group
+				label.control-label Teléfono de contacto 1:
+				.controls
+					input(id="txtPhone", class="input-standar", name="txtPhone", type="text")
+		.cgroup-inline
+			label.control-label Fechas Disponibles:
+			.controls
+				input(id="txtPhone", class="input-extralarge", name="txtPhone", type="text")
+	.control-group
+		.to-right.red Te quedan 53 de 1200 caracteres
+		label.control-label Descripción:
+		.controls-line
+			textarea(id="txtDescription", name="txtDescription", type="textarea", class="textarea-extralarge")
+	.control-group
+		label.control-label Tags del Aviso:
+		.controls-line
+			.controls
+				input(id="txtTags", class="input-extralarge", name="txtTags", type="text")
+	p.details Ingresa palabras claves que identifiquen a tu aviso, así será más fácil para los usuarios encontrar tu anuncio. Ingresa las palabras separadas por comas (,).
+.head-ads
+	h2 Ubicación
+.box-white
+	.cgroup-inline
+		.control-group
+			label.control-label 
+				span.red* 
+				| Departamento:
+			.controls
+				select
+					option - Seleccionar -
+					option Lima
+					option Departamento
+		.control-group
+			label.control-label
+				span.red* 
+				| Provincia:
+			.controls
+				select
+					option - Seleccionar -
+					option Departamento
+					option Departamento
+		.control-group
+			label.control-label
+				span.red* 
+				| Distrito:
+			.controls
+				select
+					option - Seleccionar -
+					option Departamento
+					option Departamento
+		.control-group
+			label.control-label Urbanización:
+			.controls
+				select
+					option - Seleccionar -
+					option Departamento
+					option Departamento
+	.control-group
+			.cgroup-inline
+				.control-group
+					label.control-label Vía:
+					.controls
+						select.select-small
+							option Avenida
+							option Avenida
+							option Avenida
+				.control-group
+					label.control-label Nombre de la Vía:
+					.controls
+						input(id="txtVia", class="input-xmedium", name="txtVia", type="text")
+				.control-group
+					label.control-label Número:
+					.controls
+						input(id="txtNumber", class="input-xmini", name="txtNumber", type="text")
+	.control-group
+		label.control-label Referencias:
+		.controls-line
+			.controls
+				input(id="txtReference", class="input-extralarge", name="txtReference", type="text")
+	.control-group
+		label.control-label Arrastre el marcador rojo en la ubicación en donde se encuentra su inmueble:
+		.map
+			img(src="images/map.png", alt="texto", width="920", height="300")
+.head-ads
+	h2 Fotos
+.box-white
+	.control-group
+		label.control-label Referencias:
+		.controls-line
+			.controls
+				input(id="txtReference", class="input-extralarge", name="txtReference", type="text")
+.head-ads
+	h2 Detalles Adicionales
+.box-white
+	.control-group
+		ul.list-chk4.row
+			li
+				label.ioption(for="chkAreadeport")
+					input(id="chkAreadeport", name="chkAreadeport", type="checkbox")
+					| Área deportiva
+			li
+				label.ioption(for="chkTerraza")
+					input(id="chkTerraza", name="chkTerraza", type="checkbox")
+					| Terraza
+			li
+				label.ioption(for="chkCable")
+					input(id="chkCable", name="chkCable", type="checkbox")
+					| Cable
+			li
+				label.ioption(for="chkPortero")
+					input(id="chkPortero", name="chkPortero", type="checkbox")
+					| Portero Eléctrico
+			li
+				label.ioption(for="chkPiscina")
+					input(id="chkPiscina", name="chkPiscina", type="checkbox")
+					| Piscina
+			li
+				label.ioption(for="chkBano")
+					input(id="chkBano", name="chkBano", type="checkbox")
+					| Baño Propio
+			li
+				label.ioption(for="chkAmoblado")
+					input(id="chkAmoblado", name="chkAmoblado", type="checkbox")
+					| Amoblado
+			li
+				label.ioption(for="chkCocina")
+					input(id="chkCocina", name="chkCocina", type="checkbox")
+					| Cocina con Repostero
+			li
+				label.ioption(for="chkDeposito")
+					input(id="chkDeposito", name="chkDeposito", type="checkbox")
+					| Depósito
+			li
+				label.ioption(for="chkPatio")
+					input(id="chkPatio", name="chkPatio", type="checkbox")
+					| Patio
+			li
+				label.ioption(for="chkClub")
+					input(id="chkClub", name="chkClub", type="checkbox")
+					| Club House
+			li
+				label.ioption(for="chkWalkcloset")
+					input(id="chkWalkcloset", name="chkWalkcloset", type="checkbox")
+					| Walk-in Closet
+			li
+				label.ioption(for="chkKitchenette")
+					input(id="chkKitchenette", name="chkKitchenette", type="checkbox")
+					| Kitchenette
+			li
+				label.ioption(for="chkServicio")
+					input(id="chkServicio", name="chkServicio", type="checkbox")
+					| Cuarto de servicio
+			li
+				label.ioption(for="chkIndependiente")
+					input(id="chkIndependiente", name="chkIndependiente", type="checkbox")
+					| Independiente
+			li
+				label.ioption(for="chkCloset")
+					input(id="chkCloset", name="chkCloset", type="checkbox")
+					| Closet
+			li
+				label.ioption(for="chkAreadeportiva")
+					input(id="chkAreadeportiva", name="chkAreadeportiva", type="checkbox")
+					| Área BBQ
+			li
+				label.ioption(for="chkBanoserv")
+					input(id="chkBanoserv", name="chkBanoserv", type="checkbox")
+					| Baño de Servicio
+			li
+				label.ioption(for="chkJacussi")
+					input(id="chkJacussi", name="chkJacussi", type="checkbox")
+					| Jacuzzi
+			li
+				label.ioption(for="chkBalcon")
+					input(id="chkBalcon", name="chkBalcon", type="checkbox")
+					| Balcón
+			li
+				label.ioption(for="chkInternet")
+					input(id="chkInternet", name="chkInternet", type="checkbox")
+					| Internet
+			li
+				label.ioption(for="chkLavanderia")
+					input(id="chkLavanderia", name="chkLavanderia", type="checkbox")
+					| Lavandería
+			li
+				label.ioption(for="chkJardin")
+					input(id="chkJardin", name="chkJardin", type="checkbox")
+					| Jardín
+			li
+				label.ioption(for="chkVista")
+					input(id="chkVista", name="chkVista", type="checkbox")
+					| Vista a la Calle
+			li
+				label.ioption(for="chkParque")
+					input(id="chkParque", name="chkParque", type="checkbox")
+					| Frente a Parque
+			li
+				label.ioption(for="chkGuardian")
+					input(id="chkGuardian", name="chkGuardian", type="checkbox")
+					| Caseta con Guardían exterior
+.control
+	a(href="javascript:;",class="btn-gray btn-medium", title="Regresar") Regresar
+	a(href="javascript:;",class="btn-urb btn-medium", title="Continuar") Continuar

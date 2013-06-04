@@ -1,0 +1,62 @@
+include ../../layout/jade/vars.jade
+
+.head-ads
+	h2.nofloat <?php echo $this->title ?>
+	form(id="frmSearch",class="search-titems")
+		.controls
+			input(type="text",name="txtSearch", id="txtSearch", placeholder="Busca por Nombre del Aviso")
+		.controls
+			button(type="submit",class="btn-urb btn-small") Buscar
+.cgroup-inline.mb20
+	.control-group
+		select.select-mini
+			option falta
+			option Todo
+			option Nada
+	.control-group.mleft10
+		a(href="javascript:;", title="Eliminar", class="btn-gray btn-small") Eliminar
+		a(href="javascript:;", title="Exportar a Excel", class="btn-gray btn-small") Exportar a Excel
+	.to-right
+		a(href="javascript:;",class="btn-urb", title="Agregar Contacto") Agregar Contacto
+table.table
+		thead
+			tr
+				th.tw270 
+					span.tbl-arrows Nombre
+					span.arrows
+						a(href="javascript:;", title="Down", class="down") Down
+						a(href="javascript:;", title="Up", class="up") Up
+				th.tw200 
+					span.tbl-arrows Email
+					span.arrows
+						a(href="javascript:;", title="Down", class="down") Down
+						a(href="javascript:;", title="Up", class="up") Up
+				th.tw130 
+					span.tbl-arrows Teléfono
+					span.arrows
+						a(href="javascript:;", title="Down", class="down") Down
+						a(href="javascript:;", title="Up", class="up") Up
+				th.tw130 
+					span.tbl-arrows Celular
+					span.arrows
+						a(href="javascript:;", title="Down", class="down") Down
+						a(href="javascript:;", title="Up", class="up") Up
+				th.tw160 Acciones
+		tbody
+			each item in array10
+				tr
+					td.tbl-option 
+						label(for="chkName") 
+						input(id="chkName", name="chkName", type="checkbox")
+						| Alejandro David Monteros Palacios
+					td rgutierrez@outlook.com
+					td 4368595
+					td 999888777
+					td
+						a(class="action-icons property",href="javascript:;", title="Ver Datos") Ver Datos
+						a(class="action-icons message",href="javascript:;", title="Enviar mail a Contacto") Enviar mail a Contacto
+						a(class="action-icons calendar",href="javascript:;", title="Agendar Cita") Agendar Cita
+						a(class="action-icons note",href="javascript:;", title="Agregar Notas") Agregar Notas
+						a(class="action-icons clean",href="javascript:;", title="Eliminar") Eliminar
+
+a(class="btn-vermas", href="javascript:;", title="Ver más Contactos") Ver más Contactos

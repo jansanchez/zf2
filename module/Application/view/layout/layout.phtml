@@ -1,49 +1,290 @@
-<?php echo $this->doctype(); ?>
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
-
-        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0') ?>
-
-        <!-- Le styles -->
-        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
-                        ->prependStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
-                        ->prependStylesheet($this->basePath() . '/css/style.css')
-                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
-
-        <!-- Scripts -->
-        <?php echo $this->headScript()->prependFile($this->basePath() . '/js/html5.js', 'text/javascript', array('conditional' => 'lt IE 9',))
-                                      ->prependFile($this->basePath() . '/js/bootstrap.min.js')
-                                      ->prependFile($this->basePath() . '/js/jquery.min.js') ?>
-
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Skeleton Application') ?></a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="es"> <![endif]-->
+<!--[if gt IE 8]> <html lang="es"> <![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Alquiler y Venta de Casas, Departamentos, Habitaciones, Casas de Playa de todo el Perú | Los Clasificados inmobiliarios de El Comercio | Urbania.clasificados.pe</title>
+  <meta name="title" content="Alquiler y Venta de Casas, Departamentos, Habitaciones, Casas de Playa de todo el Perú | Los Clasificados inmobiliarios de El Comercio | Urbania.clasificados.pe"/>
+  <meta name="description" content="Venta y Alquiler de Casas, departamentos en el Perú en Urbania.clasificados.pe | Los Clasificados inmobiliarios de El Comercio."/>
+  <meta name="keywords" content="Venta de casas, alquiler de casas, alquiler de departamentos, venta de departamentos, venta de terrenos, casas de playa, proyectos, inmobiliarias, constructoras, lotes y terrenos, alquiler de habitaciones, locales, oficinas, Clasificados del Peru, Clasificados Online ,Los Clasificados inmobiliarios de El Comercio"/>
+  <meta name="author" content="urbania.clasificados.pe"/>
+  <meta name="viewport" content="width=device-width"/>
+  <meta name="language" content="es"/>
+  <meta name="robots" content="index,follow"/>
+  <meta name="geo.region" content="PE-LIM"/>
+  <meta name="geo.placename" content="Cercado de Lima"/>
+  <meta name="geo.position" content="-12.0478;-77.0622"/>
+  <meta name="ICBM" content="-12.0478, -77.0622"/>
+  <meta property="og:title" content="Alquiler y Venta de Casas, Departamentos, Habitaciones, Casas de Playa de todo el Perú | Los Clasificados inmobiliarios de El Comercio | Urbania.clasificados.pe"/>
+  <meta property="og:description" content="Venta y Alquiler de Casas, departamentos en el Perú en Urbania.clasificados.pe | Los Clasificados inmobiliarios de El Comercio."/>
+  <meta property="og:image" content="images/neoauto.gif"/>
+  <link href="images/neoauto.gif" rel="image_src" type="image/jpeg"/>
+  <link href="images/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <meta name="DC.Title" content="Alquiler y Venta de Casas, Departamentos, Habitaciones, Casas de Playa de todo el Perú | Los Clasificados inmobiliarios de El Comercio | Urbania.clasificados.pe"/>
+  <meta name="DC.Creator" content="urbania.clasificados.pe"/>
+  <meta name="DC.Description" content="Venta y Alquiler de Casas, departamentos en el Perú en Urbania.clasificados.pe | Los Clasificados inmobiliarios de El Comercio."/>
+  <meta name="DC.Publisher" content="urbania.clasificados.pe"/>
+  <meta name="DC.Contributor" content="elcomercio.pe"/>
+  <meta name="DC.Language" content="es"/><!--[if lt IE 9]>
+  <script src="/js/libs/html5/html5.js"></script><![endif]-->
+  <link type="text/css" href="/css/base.css" rel="stylesheet"/>
+  <link type="text/css" href="/css/rocio.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="top-gec">
+    <div class="w980"><a href="http://elcomercio.pe" target="_blank" title="Grupo El Comercio" class="logo-gec"></a>
+      <h4>Los clasificados Inmobiliarios del Grupo El Comercio</h4>
+      <ul itemtype="http://schema.org/Organization" itemscope="itemscope" class="cont-clasif">
+        <li><span class="clasif-part">Parte de</span><a href="javascript:;" itemprop="name" title="Clasificados.pe" class="clasif-link">Clasificados.pe</a>
+          <ul class="clasif-list">
+            <li itemtype="http://schema.org/Organization" itemscope="itemscope">
+              <p itemprop="member">Empleos</p><a href="http://aptitus.clasificados.pe/?ref=urbania" itemprop="url" target="_blank" title="Aptitus.pe">Aptitus.pe</a>
+            </li>
+            <li itemtype="http://schema.org/Organization" itemscope="itemscope">
+              <p itemprop="member">Autos y motos</p><a href="http://neoauto.clasificados.pe/?ref=urbania" itemprop="url" target="_blank" title="Neoauto.pe">Neoauto.pe</a>
+            </li>
+            <li itemtype="http://schema.org/Organization" itemscope="itemscope">
+              <p itemprop="member">Comprar y vender</p><a href="http://kotear.clasificados.pe/?ref=urbania" itemprop="url" target="_blank" title="Kotear.pe">Kotear.pe</a>
+            </li>
+            <li itemtype="http://schema.org/Organization" itemscope="itemscope">
+              <p itemprop="member">Micro y pequeñas empresas</p><a href="http://nuestromercado.clasificados.pe/?ref=urbania" itemprop="url" target="_blank" title="NuestroMercado.pe">NuestroMercado.pe</a>
+            </li>
+            <li itemtype="http://schema.org/Organization" itemscope="itemscope">
+              <p itemprop="member">Restaurantes y cafés</p><a href="http://guiagps.clasificados.pe/restaurantes?ref=urbania" itemprop="url" target="_blank" title="GPSRestaurantes.pe">GPSRestaurantes.pe</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <header>
+    <div class="box-center">
+      <h1 class="head-logo"><a href="http://zf2.pe" title="Urbania el buscador inmobiliario del Perú">Alquiler y Venta de Casas, Departamentos, Habitaciones,  Terrenos, Casas de Playa e Inmuebles del Perú</a></h1><!--form(id="frm_top_search",class="controls-inline")
+      <div class="controls">
+        <input type="text" name="txt-search" placeholder="Buscar por descripción o código de aviso"/>
+      </div>
+      <div class="controls">
+        <button type="submit" class="btn-urb">Buscar</button>
+      </div>-->
+      <div class="head-info">
+        <div class="head-social row"><a href="javascript:;" title="Facebook" class="fb"></a><a href="javascript:;" title="Twitter" class="twt"></a><a href="javascript:;" title="Google+" class="glg"></a></div>
+        <p>Lima, Viernes 3 de Mayo del 2013</p>
+      </div>
+    </div>
+    <nav class="cont-menu row">
+      <ul id="main-menu">
+        <li><a href="javascript:;" title="Portada">Portada</a></li>
+        <li><a href="javascript:;" title="Inmuebles">Inmuebles</a></li>
+        <li><a href="javascript:;" title="Proyectos">Proyectos</a></li>
+        <li><a href="javascript:;" title="Inmobiliarias &amp; Constructoras">Inmobiliarias & Constructoras</a></li>
+        <li><a href="javascript:;" title="Agentes">Agentes</a></li>
+        <li><a href="javascript:;" title="Publica tu aviso">Publica tu aviso</a></li>
+        <li><a href="javascript:;" title="Servicios">Servicio</a></li>
+      </ul>
+    </nav>
+    <div id="sec-menu">
+      <ul class="box-center">
+        <li><a href="/application/persona/index" title="Dashboard">Dashboard</a></li>
+        <li><a href="/application/persona/mi-perfil" title="Mi Perfil">Mi Perfil</a></li>
+        <li><a href="/application/persona/datos-facturacion" title="Mis Avisos">Mis Avisos</a></li>
+        <li><a href="/application/persona/libreta-contactos" title="Mis Pagos">Mis Pagos</a></li>
+        <li><a href="/application/persona/mis-avisos-activos" title="Contactos">Contactos</a></li>
+        <li><a href="/application/persona/publicar-aviso-datos" title="Estadísticas">Estadísticas</a></li>
+        <li><a href="/application/persona/index" title="Oportunidades de Negocio">Oportunidades de Negocio</a></li>
+      </ul>
+    </div>
+  </header>
+  <div id="wrapper"><?php echo $this->content; ?></div>
+  <div class="fot-decor"></div>
+  <footer>
+    <div class="box-center">
+      <div class="grids-9">
+        <h2 class="urb-title turb-foot"><span></span>Enlaces de interés</h2>
+        <div class="row pb50">
+          <div class="grids-3">
+            <h3>Distritos más Buscados</h3>
+            <ul class="fot-list">
+              <li><a href="javascript:;" title="Miraflores">Miraflores</a></li>
+              <li><a href="javascript:;" title="Santiago de Surco">Santiago de Surco</a></li>
+              <li><a href="javascript:;" title="San Isidro">San Isidro</a></li>
+              <li><a href="javascript:;" title="San Borja">San Borja</a></li>
+              <li><a href="javascript:;" title="Magdalena del Mar">Magdalena del Mar</a></li>
+              <li><a href="javascript:;" title="San Juan de Miraflores">San Juan de Miraflores</a></li>
+              <li><a href="javascript:;" title="Chorrillos">Chorrillos</a></li>
+            </ul>
+          </div>
+          <div class="grids-3">
+            <h3>Proyectos más vistos</h3>
+            <ul class="fot-list">
+              <li><a href="javascript:;" title="Edificio Barranco 360">Edificio Barranco 360</a></li>
+              <li><a href="javascript:;" title="Puerta de Hierro">Puerta de Hierro</a></li>
+              <li><a href="javascript:;" title="Upper Pardo 570">Upper Pardo 570</a></li>
+              <li><a href="javascript:;" title="Arboleda Casa Club">Arboleda Casa Club</a></li>
+              <li><a href="javascript:;" title="Barranco Villa Club">Barranco Villa Club</a></li>
+              <li><a href="javascript:;" title="Edificio Barranco 360">Edificio Barranco 360</a></li>
+              <li><a href="javascript:;" title="Puerta de Hierro">Puerta de Hierro</a></li>
+            </ul>
+          </div>
+          <div class="grids-3">
+            <h3>Inmuebles más vistos</h3>
+            <ul class="fot-list">
+              <li><a href="javascript:;" title="Departamento en Barranco">Departamento en Barranco</a></li>
+              <li><a href="javascript:;" title="Casa en la Molina">Casa en la Molina</a></li>
+              <li><a href="javascript:;" title="Departamento Santiago de Surco">Departamento Santiago de Surco</a></li>
+              <li><a href="javascript:;" title="Departamento, Pueblo Libre">Departamento, Pueblo Libre</a></li>
+              <li><a href="javascript:;" title="Departamento San Miguel">Departamento San Miguel</a></li>
+              <li><a href="javascript:;" title="Departamento en Barranco">Departamento en Barranco</a></li>
+              <li><a href="javascript:;" title="Casa en la Molina">Casa en la Molina</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="container">
-            <?php echo $this->content; ?>
-            <hr>
-            <footer>
-                <p>&copy; 2005 - <?php echo date('Y') ?> by Zend Technologies Ltd. <?php echo $this->translate('All rights reserved.') ?></p>
-            </footer>
-        </div> <!-- /container -->
-        <?php echo $this->inlineScript() ?>
-    </body>
-</html>
+        <h2 class="urb-title turb-foot"><span></span>Inmuebles por distrito</h2>
+        <div class="row g3-pb30">
+          <div class="grids-3">
+            <h3>Miraflores</h3>
+            <ul class="fot-list">
+              <li><a href="javascript:;" title="Miraflores">Miraflores</a></li>
+              <li><a href="javascript:;" title="Santiago de Surco">Santiago de Surco</a></li>
+              <li><a href="javascript:;" title="San Isidro">San Isidro</a></li>
+              <li><a href="javascript:;" title="San Borja">San Borja</a></li>
+              <li><a href="javascript:;" title="Magdalena del Mar">Magdalena del Mar</a></li>
+              <li><a href="javascript:;" title="San Juan de Miraflores">San Juan de Miraflores</a></li>
+              <li><a href="javascript:;" title="Chorrillos">Chorrillos</a></li>
+            </ul>
+          </div>
+          <div class="grids-3">
+            <h3>Santiago de Surco</h3>
+            <ul class="fot-list">
+              <li><a href="javascript:;" title="Edificio Barranco 360">Edificio Barranco 360</a></li>
+              <li><a href="javascript:;" title="Puerta de Hierro">Puerta de Hierro</a></li>
+              <li><a href="javascript:;" title="Upper Pardo 570">Upper Pardo 570</a></li>
+              <li><a href="javascript:;" title="Arboleda Casa Club">Arboleda Casa Club</a></li>
+              <li><a href="javascript:;" title="Barranco Villa Club">Barranco Villa Club</a></li>
+              <li><a href="javascript:;" title="Edificio Barranco 360">Edificio Barranco 360</a></li>
+              <li><a href="javascript:;" title="Puerta de Hierro">Puerta de Hierro</a></li>
+            </ul>
+          </div>
+          <div class="grids-3">
+            <h3>San Isidro</h3>
+            <ul class="fot-list">
+              <li><a href="javascript:;" title="Departamento en Barranco">Departamento en Barranco</a></li>
+              <li><a href="javascript:;" title="Casa en la Molina">Casa en la Molina</a></li>
+              <li><a href="javascript:;" title="Departamento Santiago de Surco">Departamento Santiago de Surco</a></li>
+              <li><a href="javascript:;" title="Departamento, Pueblo Libre">Departamento, Pueblo Libre</a></li>
+              <li><a href="javascript:;" title="Departamento San Miguel">Departamento San Miguel</a></li>
+              <li><a href="javascript:;" title="Departamento en Barranco">Departamento en Barranco</a></li>
+              <li><a href="javascript:;" title="Casa en la Molina">Casa en la Molina</a></li>
+            </ul>
+          </div>
+          <div class="grids-3">
+            <h3>La Molina</h3>
+            <ul class="fot-list">
+              <li><a href="javascript:;" title="Miraflores">Miraflores</a></li>
+              <li><a href="javascript:;" title="Santiago de Surco">Santiago de Surco</a></li>
+              <li><a href="javascript:;" title="San Isidro">San Isidro</a></li>
+              <li><a href="javascript:;" title="San Borja">San Borja</a></li>
+              <li><a href="javascript:;" title="Magdalena del Mar">Magdalena del Mar</a></li>
+              <li><a href="javascript:;" title="San Juan de Miraflores">San Juan de Miraflores</a></li>
+              <li><a href="javascript:;" title="Chorrillos">Chorrillos</a></li>
+            </ul>
+          </div>
+          <div class="grids-3">
+            <h3>San Borja</h3>
+            <ul class="fot-list">
+              <li><a href="javascript:;" title="Edificio Barranco 360">Edificio Barranco 360</a></li>
+              <li><a href="javascript:;" title="Puerta de Hierro">Puerta de Hierro</a></li>
+              <li><a href="javascript:;" title="Upper Pardo 570">Upper Pardo 570</a></li>
+              <li><a href="javascript:;" title="Arboleda Casa Club">Arboleda Casa Club</a></li>
+              <li><a href="javascript:;" title="Barranco Villa Club">Barranco Villa Club</a></li>
+              <li><a href="javascript:;" title="Edificio Barranco 360">Edificio Barranco 360</a></li>
+              <li><a href="javascript:;" title="Puerta de Hierro">Puerta de Hierro</a></li>
+            </ul>
+          </div>
+          <div class="grids-3">
+            <h3>Magdalena del Mar</h3>
+            <ul class="fot-list">
+              <li><a href="javascript:;" title="Departamento en Barranco">Departamento en Barranco</a></li>
+              <li><a href="javascript:;" title="Casa en la Molina">Casa en la Molina</a></li>
+              <li><a href="javascript:;" title="Departamento Santiago de Surco">Departamento Santiago de Surco</a></li>
+              <li><a href="javascript:;" title="Departamento, Pueblo Libre">Departamento, Pueblo Libre</a></li>
+              <li><a href="javascript:;" title="Departamento San Miguel">Departamento San Miguel</a></li>
+              <li><a href="javascript:;" title="Departamento en Barranco">Departamento en Barranco</a></li>
+              <li><a href="javascript:;" title="Casa en la Molina">Casa en la Molina</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row fot-nav"><span class="nav-line"></span>
+          <div class="navs"><span>Mira más Distritos</span><a href="javascript:;" class="nav-prev"></a><a href="javascript:;" class="nav-next"></a></div>
+        </div>
+      </div>
+      <div class="grids-3">
+        <h2 class="urb-title turb-foot"><span></span>Central de Ayuda</h2>
+        <div class="fot-banner cntrlHelp"><span class="fban-decor"></span>
+          <div class="fix-bg">
+            <p>¿Tienes alguna duda o consulta? Estamos para ayudarte.</p><a href="javascript:;" class="btn-urb">Clic aquí</a>
+            <ul>
+              <li><a href="javascript:;">Preguntas Frecuentes</a></li>
+              <li><a href="javascript:;">Ayuda en línea</a></li>
+              <li><a href="javascript:;">Contáctanos vía mail</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fot-banner qdigital"><span class="fban-decor"></span>
+          <div class="fix-bg">
+            <p>Lee la revista <span>Urbania </span>edición digital en</p><span class="fot-quiosco"></span><a href="javascript:;" class="btn-urb">Clic aquí</a>
+          </div>
+        </div>
+        <h4>Síguenos</h4>
+        <div class="row"><a href="javascript:;" class="fot-social fb"></a><a href="javascript:;" class="fot-social twt"></a><a href="javascript:;" class="fot-social glg"></a><a href="javascript:;" class="fot-social ytb"></a></div>
+      </div>
+    </div>
+    <div class="content-paid">
+      <div class="box-center">
+        <div class="row"><span>Compras 100% seguras con:</span><a href="javascript:;" class="paids pefectivo"></a><a href="javascript:;" class="paids visa"></a><a href="javascript:;" class="paids master"></a><a href="javascript:;" class="paids vbvisa"></a><a href="javascript:;" class="paids smaster"></a><a href="javascript:;" class="paids afvisa"></a></div>
+        <p>Autorizado por Visa para realizar transacciones electrónicas</p>
+      </div>
+    </div>
+    <div class="box-center copyright">
+      <p> <span>® </span>2013 Urbania.pe</p>
+      <ul>
+        <li><a href="javascript:;">Términos y Condiciones</a></li>
+        <li><a href="javascript:;">Política de Publicación</a></li>
+        <li><a href="javascript:;">Políticas de Privacidad</a></li>
+      </ul><a href="javascript:;" class="book-claims"><span></span>Libro de Reclamaciones</a>
+    </div>
+  </footer>
+  <div class="see-also">
+    <div class="box-center"><span>Visite también:</span>
+      <ul>
+        <li><a href="http://elcomercio.pe?ref=urbania" title="Diario el Comercio" target="_blank">elcomercio.pe</a></li>
+        <li><a href="http://peru.com?ref=urbania" title="Peru.com" target="_blank">peru.com</a></li>
+        <li><a href="http://peru21.pe?ref=urbania" title="Diario Perú21" target="_blank">peru21.pe</a></li>
+        <li><a href="http://laprensa.com.pe?ref=plazatop" title="La Prensa" target="_blank">laprensa.com.pe</a></li>
+        <li><a href="http://gestion.pe?ref=plazatop" title="Diario Gestión" target="_blank">gestion.pe</a></li>
+        <li><a href="http://depor.pe?ref=plazatop" title="Depor.pe" target="_blank">depor.pe</a></li>
+        <li><a href="http://trome.pe?ref=plazatop" title="Diario Trome" target="_blank">trome.pe</a></li>
+        <li><a href="http://publimetro.pe?ref=plazatop" title="Publimetro" target="_blank">publimetro.pe</a></li>
+        <li><a href="http://gec.pe?ref=plazatop" title="GEC" target="_blank">gec.pe</a></li>
+        <li><a href="http://clasificados.pe/?ref=plazatop" title="Clasificados" target="_blank">clasificados.pe</a></li>
+      </ul>
+      <ul>
+        <li><a href="http://aptitus.pe?ref=plazatop" title="Aptitus" target="_blank">aptitus.pe</a></li>
+        <li><a href="http://kotear.pe?ref=plazatop" title="Kotear" target="_blank">kotear.pe</a></li>
+        <li><a href="http://neoauto.pe?ref=plazatop" title="Neoauto" target="_blank">neoauto.pe</a></li>
+        <li><a href="http://guiagps.pe?ref=plazatop" title="GuiaGPS" target="_blank">guiagps.pe</a></li>
+        <li><a href="http://ofertop.pe?ref=plazatop" title="Ofertop" target="_blank">ofertop.pe</a></li>
+        <li><a href="http://plazatop.pe/?ref=plazatop" title="PlazaTop" target="_blank">plazatop.pe</a></li>
+        <li><a href="http://nuestromercado.pe?ref=plazatop" title="NuestroMercado" target="_blank">nuestromercado.pe</a></li>
+        <li><a href="http://pagoefectivo.pe?ref=plazatop" title="PagoEfectivo" target="_blank">pagoefectivo.pe</a></li>
+        <li><a href="http://clubsuscriptores.pe?ref=plazatop" title="Club de Suscriptores" target="_blank">clubsuscriptores.pe</a></li>
+        <li><a href="http://perured.pe?ref=plazatop" title="PeruRed" target="_blank">perured.pe</a></li>
+      </ul>
+    </div>
+  </div>
+  <script data-main="/js/main" src="/js/libs/require/require-min.js" type="text/javascript"></script>
+</body>

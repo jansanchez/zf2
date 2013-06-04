@@ -1,0 +1,101 @@
+include ../../layout/jade/vars.jade
+
+.head-ads
+	h2 <?php echo $this->title ?>
+.row
+	.to-right
+		a(href="javascript:;",class="btn-urb", title="Añadir RUC") Añadir RUC
+table.table.mt20.mb30
+	thead
+		tr
+			th.tw50 #
+			th.tw200 
+				span.tbl-arrows  Fecha de Registro
+				span.arrows
+					a(href="javascript:;", title="Down", class="down") Down
+					a(href="javascript:;", title="Up", class="up") Up
+			th.tw140 RUC
+			th.tw410 Razón Social
+			th.tw90 Acciones
+	tbody
+		tr
+			td 1
+			td 01/11/2012  &nbsp;|&nbsp;  10:25:01
+			td 20123456789
+			td.tlbleft Panchita Inmobiliaria SAC
+			td
+				a(class="action-icons edit",href="javascript:;", title="Editar") editar
+				a(class="action-icons clean",href="javascript:;", title="Eliminar") Eliminar
+		tr
+			td 2
+			td 01/11/2012  &nbsp;|&nbsp;  10:25:01
+			td 20123456789
+			td.tlbleft Panchita Inmobiliaria SAC
+			td
+				a(class="action-icons edit",href="javascript:;", title="Editar") editar
+				a(class="action-icons clean",href="javascript:;", title="Eliminar") Eliminar
+		tr
+			td 3
+			td 01/11/2012  &nbsp;|&nbsp;  10:25:01
+			td 20123456789
+			td.tlbleft Condominios Panchita SAC
+			td
+				a(class="action-icons edit",href="javascript:;", title="Editar") editar
+				a(class="action-icons clean",href="javascript:;", title="Eliminar") Eliminar
+		tr
+			td 4
+			td 01/11/2012  &nbsp;|&nbsp;  10:25:01
+			td 20123456789
+			td.tlbleft Panchita Inmobiliaria SAC
+			td
+				a(class="action-icons edit",href="javascript:;", title="Editar") editar
+				a(class="action-icons clean",href="javascript:;", title="Eliminar") Eliminar
+.head-ads
+	h2 Nuevo Registro de Facturación
+.box-white.mg0
+	form(id="formAlert", method="post", action="", class="formAlert")
+		h3.mb30 Los campos con 
+			span.red* 
+			| son obligatorios
+		.control-group
+			.cgroup-inline
+				.control-group
+					label.control-label 
+						span.red *
+						| RUC:
+					input(id="txtRuc", class="input-standar", name="txtRuc", type="text")
+				.control-group
+					label.control-label
+						span.red *
+						| Razón Social:
+					input(id="txtRazonsocial", class="input-medium", name="txtRazonsocial", type="text")
+		.control-group
+			label.control-label
+				span.red *
+				| Dirección:
+			input(id="txtDireccion", class="input-large", name="txtDireccion", type="text")
+		.control-group.mb20
+			.cgroup-inline
+				.control-group
+					label.control-label Departamento:
+					.controls
+						select
+							option  
+							option Departamento
+							option Departamento
+				.control-group
+					label.control-label Provincia:
+					.controls
+						select
+							option  
+							option Departamento
+							option Departamento
+				.control-group
+					label.control-label Distrito:
+					.controls
+						select
+							option  
+							option Departamento
+							option Departamento
+	.control
+		a(href="javascript:;",class="btn-urb btn-medium", title="Guardar") Guardar

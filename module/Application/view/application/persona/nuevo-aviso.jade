@@ -1,0 +1,16 @@
+include ../../layout/jade/vars.jade
+
+h2 Fotos
+	div.white-box#divGallery
+		div.dragger
+			span.note Suelta tus imágenes aquí 
+				small Máximo 2 MB por imágen.
+
+		div.options
+			input(type="text", id="file", name="file", placeholder="No ha elegido ningún archivo")
+			button(type="button", id="btnChoose") Elige tu imagen
+
+		form(name="demoFiler", id="demoFiler", enctype="multipart/form-data")
+			fielset
+				input(type="file", name="multiUpload", id="multiUpload", multiple="multiple")
+				input(type="submit", name="submitHandler", id="submitHandler", value="Upload")
