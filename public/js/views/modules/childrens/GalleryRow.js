@@ -1,6 +1,6 @@
 /*Trayendo la plantilla*/
-define(['backbone', 'underscore', 'text!templates/includes/thumbView.html'], 
-	function(Backbone, _, thumbView) {
+define(['backbone', 'underscore'], 
+	function(Backbone, _) {
 
 		/*Creamos la vista hija "galleryRow" para cada imagen independiente*/
 		var galleryRow = Backbone.View.extend({
@@ -16,7 +16,7 @@ define(['backbone', 'underscore', 'text!templates/includes/thumbView.html'],
 				_.bindAll(this);
 
 				/*Al iniciar nuestra vista asignamos la plantilla en la variable "template"*/
-				this.template = this.template || $.trim(thumbView);
+				this.template = this.template || $.trim($('#thumbView').html());
 
 				/*Nos podemos a escuchar desde la vista hija actual cuando ocurra un evento "change" en el modelo y lanzamos la función "render" de la vista hija actual*/
 				this.listenTo(this.model, 'change', this.render);

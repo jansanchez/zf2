@@ -1,4 +1,5 @@
-//http://gdata.youtube.com/feeds/api/videos/R9UW3e30udM?v=2&alt=json-in-script&callback=youtubeFeedCallback
-//120px x 90px
 div#urlVideoView
+	a(href="http://www.youtube.com/watch?v={{vid}}", target="_blank", title="{{title}}")
+		img(alt="{{title}}", data-src="{{preview}}", width="{{width}}", height="{{height}}")
 	a(href="http://www.youtube.com/watch?v={{vid}}", target="_blank", title="{{title}}") {{title}}
+	a(class="remove",href="javascript:;", title="Eliminar") Eliminar

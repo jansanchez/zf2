@@ -1,61 +1,68 @@
-
 define(['backbone', 'underscore', 'views/modules/childrens/VideoRow',  '/js/models/collections/Videos.js'], 
-	function(Backbone, _, VideoRow, Images) {
+	function(Backbone, _, VideoRow, Videos) {
+		var GalleryVideo = Backbone.View.extend({
+			el : $('#divVideoGallery'),
+			contador : 0,
+			collection: null,
+			events: {
+				"click #btnAddVideo" : "addVideoUrl"
+			},
+			initialize: function() {
+				_.bindAll(this);
+				this.collection = new Videos();
+				this.listenTo(this.collection, 'add', this.addOne);
+				this.listenTo(this.collection, 'remove', this.removeOne);
+			},
+			render : function(){
+			},
+			addVideo : function(vid,that){
 
-	/*Creamos la vista principal que contendrá nuestras vistas hijas*/
-	var GalleryVideo = Backbone.View.extend({
-		/*Declaro el elemento principal de la vista*/
-		el : $('#divVideoGallery'),
-		contador : 0,
-		collection: null,
-		/*Defino la lista de eventos para nuestra vista principal*/
-		events: {
-			/*Defino el evento "click" en el elemento "#btnChoose" al ser disparado ejecutara la funcion "addImg" */
-			"click #btnAddVideo" : "addVideo"
-		},
-		initialize: function() {
+				var videoid = $('#txtVideo').val();
+				var m;
 
-			/*_.bindAll(this) hace que las funciones apunten siempre al "this" del objeto principal*/
-			_.bindAll(this);
+				if (m = videoid.match(/^http:\/\/www\.youtube\.com\/.*[?&]v=([^&]+)/i) || videoid.match(/^http:\/\/youtu\.be\/([^?]+)/i)) {
+				videoid = m[1];
+				}
 
-			/*Asignamos a la variable "collection" una instancia de nuestra Colección*/
-			this.collection = new Videos();
+				if (!videoid.match(/^[a-z0-9_-]{11}$/i)) {
+					echo('La url del video ingresado no es correcta.');
+					return;
+				}
 
-			/*Desde la vista escuchamos cuando suceda el evento "add" en la colección y lanzamos la función addOne*/
-			this.listenTo(this.collection, 'add', this.addOne);
-			/*Desde la vista escuchamos cuando suceda el evento "remove" en la colección y lanzamos la función removeOne*/
-			this.listenTo(this.collection, 'remove', this.removeOne);
-		},
-		/*Función "render" de la vista*/
-		render : function(){
-			/*Aqui renderizo la vista principal, la cargo con datos si deseo, en esta ocasión no la usamos*/
-		},
-		/*Función de la vista principal para agregar un modelo a la colección*/
-		addVideo: function(){
-			this.contador++;
-			/*Agregamos un modelo de datos nuevo a la colección*/
-			this.collection.add({src: this.contador+'.jpg', title: this.contador});
-		},
-		/*Cuando hubo un "add" en la colección ejecutamos esta función y recibimos como parametro el modelo afectado*/
-		addOne : function(modelo){
+				var url='http://gdata.youtube.com/feeds/api/videos/' + encodeURIComponent(videoid);
 
-			/*Creamos una instancia de una vista hija y le pasamos su modelo recientemente creado*/
-			var view = new VideoRow({model : modelo, collection: this.collection});
+				$.ajax({
+					url: url,
+					data: 'v=2&alt=json',
+					type: "GET",
+					dataType: "json",
+					success: function(response){
+						that.collection.add(
+							{
+								vid: videoid,
+								title: response.entry.title.$t,
+								preview: response.entry.media$group.media$thumbnail[0].url
+							}
+						);
+						$('#txtVideo').val('');
+					},
+					error: function (request, status, error) {
+						echo('El video solicitado no existe.');
+					}
+				});
+			},
+			addVideoUrl: function(){
+				this.addVideo(this.$('#txtVideo').val(), this);
+			},
+			addOne : function(modelo){
+				var view = new VideoRow({model : modelo, collection: this.collection});
+				this.$('#olVideoList').append( view.render().el );
 
-			/*Appeneamos dentro de $('.dragger') el nuevo elemento que nos devuelve la función render de la vista hija*/
-			//console.profile('selector');
-			this.$('.dragger').append( view.render().el );
-			//console.profileEnd('selector');
-		},
-		/*Cuando hubo un "remove" en la colección ejecutamos esta función y recibimos como parametro el modelo afectado*/
-		removeOne : function(modelo){
-			//Destruimos el modelo
-			//console.profile('destr');
-	        modelo.destroy();
-	        //console.profileEnd('destr');
-		}
-	});
-
-	return GalleryView;
-
+			},
+			removeOne : function(modelo){
+		        modelo.destroy();
+		        
+			}
+		});
+		return GalleryVideo;
 });

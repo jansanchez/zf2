@@ -35,6 +35,12 @@ Ins.Models = Ins.Models || {},
 Ins.Models.Collections = Ins.Models.Collections || {};
 */
 
+
+String.prototype.clearTpl = function(){
+	return this.toString().replace('data-src', 'src');
+}
+
+
 /*Require Config*/
 require.config({
     baseUrl: '/js',
@@ -42,7 +48,8 @@ require.config({
         jquery: 'libs/jquery/jquery-1.9.1.min',
 		underscore: 'libs/underscore/underscore',
 		backbone: 'libs/backbone/backbone',
-		text: 'libs/require/text'
+		text: 'libs/require/text',
+		echo: 'libs/jquery/plugins/jqConsola'
     },
 	shim: {
 		underscore: {
@@ -55,7 +62,7 @@ require.config({
 	}
 });
 
-require(['jquery', 'underscore', 'backbone', 'text'], function ($, _, Backbone, text) {
+require(['jquery', 'underscore', 'backbone', 'text', 'echo'], function ($, _, Backbone, text, echo) {
 
 	_.templateSettings = { interpolate : /\{\{(.+?)\}\}/g };
 
@@ -63,6 +70,13 @@ require(['jquery', 'underscore', 'backbone', 'text'], function ($, _, Backbone, 
 		function (GalleryView){
 			//Creamos una instancia de nuestra galería principal
 			new GalleryView({});
+		}
+	);
+
+	require(['/js/views/modules/GalleryVideo.js'],
+		function (GalleryVideo){
+			//Creamos una instancia de nuestra galería principal
+			new GalleryVideo({});
 		}
 	);
 

@@ -319,3 +319,33 @@ h2 {
 #divVideoGallery{
 	margin-top: 30px;
 }
+
+#olVideoList{
+	margin: 15px 0 0 0;
+}
+#olVideoList:empty{
+	display: none;
+}
+#olVideoList li{
+	display: none;
+	margin: 5px 0 0 0;
+}
+#olVideoList li a{
+	height: 65px;
+	width: 90px;
+}
+#olVideoList li img{
+	border: 1px solid #DDDDDD;
+	margin: 0 10px 0 2px;
+}
+#olVideoList li a.remove{
+  background: url("../img/remove.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 20px;
+    margin: 23px 0 0 15px;
+    text-indent: -999px;
+    vertical-align: top;
+    width: 20px;
+	*display: inline-block;
+	*zoom: 1;
+}

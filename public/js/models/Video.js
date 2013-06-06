@@ -3,9 +3,12 @@ define(['backbone'], function(Backbone) {
 	var Video = Backbone.Model.extend({
 		/*defino sus valores por defecto*/
 		defaults : {
-			vid : null,
+			main : 0,
+			height : 65,
+			preview : null,
 			title : null,
-			main : 0
+			vid : null,
+			width : 90
 		},
 		/*Pseudo constructor del modelo, se ejecuta cuando un modelo es instanciado*/
 		initialize : function(){
@@ -15,10 +18,6 @@ define(['backbone'], function(Backbone) {
 
 			});
 			*/
-		},
-		/*Agregamos al modelo funciones de manipulacion de sus atributos*/
-		setTitle : function(title){
-			this.set({'title' : title});
 		}
 	});
 	return Video;
