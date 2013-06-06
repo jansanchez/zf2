@@ -1,17 +1,17 @@
 
-define(['backbone', 'underscore', 'views/modules/childrens/GalleryRow',  '/js/models/collections/Images.js'], 
-	function(Backbone, _, galleryRow, Images) {
+define(['backbone', 'underscore', 'views/modules/childrens/VideoRow',  '/js/models/collections/Videos.js'], 
+	function(Backbone, _, VideoRow, Images) {
 
 	/*Creamos la vista principal que contendrá nuestras vistas hijas*/
-	var GalleryView = Backbone.View.extend({
+	var GalleryVideo = Backbone.View.extend({
 		/*Declaro el elemento principal de la vista*/
-		el : $('#divImageGallery'),
+		el : $('#divVideoGallery'),
 		contador : 0,
 		collection: null,
 		/*Defino la lista de eventos para nuestra vista principal*/
 		events: {
 			/*Defino el evento "click" en el elemento "#btnChoose" al ser disparado ejecutara la funcion "addImg" */
-			"click #btnChoose" : "addImg"
+			"click #btnAddVideo" : "addVideo"
 		},
 		initialize: function() {
 
@@ -19,7 +19,7 @@ define(['backbone', 'underscore', 'views/modules/childrens/GalleryRow',  '/js/mo
 			_.bindAll(this);
 
 			/*Asignamos a la variable "collection" una instancia de nuestra Colección*/
-			this.collection = new Images();
+			this.collection = new Videos();
 
 			/*Desde la vista escuchamos cuando suceda el evento "add" en la colección y lanzamos la función addOne*/
 			this.listenTo(this.collection, 'add', this.addOne);
@@ -31,7 +31,7 @@ define(['backbone', 'underscore', 'views/modules/childrens/GalleryRow',  '/js/mo
 			/*Aqui renderizo la vista principal, la cargo con datos si deseo, en esta ocasión no la usamos*/
 		},
 		/*Función de la vista principal para agregar un modelo a la colección*/
-		addImg: function(){
+		addVideo: function(){
 			this.contador++;
 			/*Agregamos un modelo de datos nuevo a la colección*/
 			this.collection.add({src: this.contador+'.jpg', title: this.contador});
@@ -40,7 +40,7 @@ define(['backbone', 'underscore', 'views/modules/childrens/GalleryRow',  '/js/mo
 		addOne : function(modelo){
 
 			/*Creamos una instancia de una vista hija y le pasamos su modelo recientemente creado*/
-			var view = new galleryRow({model : modelo, collection: this.collection});
+			var view = new VideoRow({model : modelo, collection: this.collection});
 
 			/*Appeneamos dentro de $('.dragger') el nuevo elemento que nos devuelve la función render de la vista hija*/
 			//console.profile('selector');

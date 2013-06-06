@@ -35,14 +35,17 @@ class PersonaController extends AbstractActionController
         return new ViewModel(array('title' => $title));
     }
 	public function libretaContactosAction()
-    {	
+    {
     	$title = 'Libreta de Contactos';
         return new ViewModel(array('title' => $title));
     }
 	public function publicarAvisoDatosAction()
-    {	
-    	$title = 'Publicar Aviso Datos';
-        return new ViewModel(array('title' => $title));
+    {
+        $id = (int)$this->params()->fromRoute("id", null);
+
+        $text = 'este es mi texto';
+
+        $title = 'Publicar Aviso Datos';
+        return new ViewModel(array('title' => $title, 'id' => $id, 'text' => $text));
     }
-    
 }

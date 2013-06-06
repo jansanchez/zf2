@@ -39,10 +39,11 @@ return array(
                     'default' => array(
                         'type'    => 'Segment',
                         'options' => array(
-                            'route'    => '/[:controller[/:action]]',
+                            'route'    => '/[:controller[/:action][/:id]]',
                             'constraints' => array(
                                 'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                'id'     => '[0-9]*'
                             ),
                             'defaults' => array(
                             ),
@@ -88,9 +89,15 @@ return array(
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'application/persona/tpl' => __DIR__ . '/../view/application/persona/tpl.phtml'
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
         ),
     ),
+    'view_helpers' => array(
+            'invokables' => array(
+                'TplLoader' => 'Zend\View\Helper\TplLoader'
+            )
+    )
 );

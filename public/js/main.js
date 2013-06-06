@@ -56,7 +56,7 @@ require.config({
 });
 
 require(['jquery', 'underscore', 'backbone', 'text'], function ($, _, Backbone, text) {
-	
+
 	_.templateSettings = { interpolate : /\{\{(.+?)\}\}/g };
 
 	require(['/js/views/modules/GalleryView.js'],

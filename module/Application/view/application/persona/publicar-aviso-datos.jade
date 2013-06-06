@@ -1,8 +1,10 @@
 include ../../layout/jade/vars.jade
 
+
+
 .head-ads
-	h2.nofloat.font24 Publicar: Paso 2 - Llena los datos del aviso
-	span.text-detail Llena los datos de tu aviso				
+	h2.nofloat.font24 Publicar: Paso <?php echo $this->id ?> - Llena los datos del aviso
+	span.text-detail Llena los datos de tu aviso
 	ul.steps
 		li Escoge<br> el Aviso
 		li.act Datos<br> del Aviso
@@ -13,8 +15,8 @@ include ../../layout/jade/vars.jade
 .box-white
 	.cgroup-inline
 		.control-group
-			label.control-label 
-				span.red* 
+			label.control-label
+				span.red*
 				| Transacción:
 			.controls
 				select
@@ -22,7 +24,7 @@ include ../../layout/jade/vars.jade
 					option Alquiler Turista
 		.control-group
 			label.control-label
-				span.red* 
+				span.red*
 				| Localizado en:
 			.controls
 				select
@@ -30,8 +32,8 @@ include ../../layout/jade/vars.jade
 					option Campo
 					option Playa
 		.control-group
-			label.control-label 
-				span.red* 
+			label.control-label
+				span.red*
 				| Tipo de Inmueble:
 			.controls
 				select
@@ -50,14 +52,14 @@ include ../../layout/jade/vars.jade
 					option Departamento
 		.control-group
 			label.control-label
-				| Precio. 
+				| Precio.
 				span.textgray TC: S/.2.55
 			.controls
 				input(id="txtPrice", class="input-small", name="txtPrice", type="text")
 	.cgroup-inline
 		.control-group
-			label.control-label 
-				span.red* 
+			label.control-label
+				span.red*
 				| Dormitorios:
 			.controls
 				select.select-medium
@@ -66,7 +68,7 @@ include ../../layout/jade/vars.jade
 					option 2
 		.control-group
 			label.control-label
-				span.red* 
+				span.red*
 				| Baños:
 			.controls
 				select.select-medium
@@ -97,23 +99,23 @@ include ../../layout/jade/vars.jade
 					option 2
 	.cgroup-inline
 		.control-group
-			label.control-label 
-				span.red* 
+			label.control-label
+				span.red*
 				| Área Terreno:
 			.controls
 				input(id="txtAreaterreno", class="input-small", name="txtAreaterreno", type="text")
 				span.help-inline m2
 		.control-group
 			label.control-label
-				span.red* 
+				span.red*
 				| Área Construida:
 			.controls
 				input(id="txtAreaconstruida", class="input-small", name="txtAreaconstruida", type="text")
 				span.help-inline m2
 	.cgroup-inline
 		.control-group
-			label.control-label 
-				span.red* 
+			label.control-label
+				span.red*
 				| Teléfono de contacto 1:
 			.controls
 				input(id="txtPhone", class="input-standar", name="txtPhone", type="text")
@@ -125,8 +127,8 @@ include ../../layout/jade/vars.jade
 	.box-hidden
 		.cgroup-inline
 			.control-group
-				label.control-label 
-					span.red* 
+				label.control-label
+					span.red*
 					| Transacción:
 				.controls
 					select
@@ -134,7 +136,7 @@ include ../../layout/jade/vars.jade
 						option Alquiler Turista
 			.control-group
 				label.control-label
-					span.red* 
+					span.red*
 					| Localizado en:
 				.controls
 					select
@@ -142,8 +144,8 @@ include ../../layout/jade/vars.jade
 						option Campo
 						option Playa
 			.control-group
-				label.control-label 
-					span.red* 
+				label.control-label
+					span.red*
 					| Tipo de Inmueble:
 				.controls
 					select
@@ -156,7 +158,7 @@ include ../../layout/jade/vars.jade
 		.cgroup-inline
 			.control-group
 				label.control-label
-					| Moneda: 
+					| Moneda:
 					span.textgray TC: S/.2.55
 				.controls
 					select.select-small
@@ -191,8 +193,8 @@ include ../../layout/jade/vars.jade
 					input(id="txtNewyear", class="input-small", name="txtNewyear", type="text")
 		.cgroup-inline
 			.control-group
-				label.control-label 
-					span.red* 
+				label.control-label
+					span.red*
 					| Dormitorios:
 				.controls
 					select.select-medium
@@ -201,7 +203,7 @@ include ../../layout/jade/vars.jade
 						option 2
 			.control-group
 				label.control-label
-					span.red* 
+					span.red*
 					| Baños:
 				.controls
 					select.select-medium
@@ -232,15 +234,15 @@ include ../../layout/jade/vars.jade
 						option 2
 		.cgroup-inline
 			.control-group
-				label.control-label 
-					span.red* 
+				label.control-label
+					span.red*
 					| Área Terreno:
 				.controls
 					input(id="txtAreaterreno", class="input-small", name="txtAreaterreno", type="text")
 					span.help-inline m2
 			.control-group
 				label.control-label
-					span.red* 
+					span.red*
 					| Área Construida:
 				.controls
 					input(id="txtAreaconstruida", class="input-small", name="txtAreaconstruida", type="text")
@@ -253,8 +255,8 @@ include ../../layout/jade/vars.jade
 						option 1
 						option 2
 			.control-group
-				label.control-label 
-					span.red* 
+				label.control-label
+					span.red*
 					| Teléfono de contacto 1:
 				.controls
 					input(id="txtPhone", class="input-standar", name="txtPhone", type="text")
@@ -282,8 +284,8 @@ include ../../layout/jade/vars.jade
 .box-white
 	.cgroup-inline
 		.control-group
-			label.control-label 
-				span.red* 
+			label.control-label
+				span.red*
 				| Departamento:
 			.controls
 				select
@@ -292,7 +294,7 @@ include ../../layout/jade/vars.jade
 					option Departamento
 		.control-group
 			label.control-label
-				span.red* 
+				span.red*
 				| Provincia:
 			.controls
 				select
@@ -301,7 +303,7 @@ include ../../layout/jade/vars.jade
 					option Departamento
 		.control-group
 			label.control-label
-				span.red* 
+				span.red*
 				| Distrito:
 			.controls
 				select
@@ -340,15 +342,33 @@ include ../../layout/jade/vars.jade
 	.control-group
 		label.control-label Arrastre el marcador rojo en la ubicación en donde se encuentra su inmueble:
 		.map
-			img(src="images/map.png", alt="texto", width="920", height="300")
+			div#map-canvas
 .head-ads
 	h2 Fotos
-.box-white
-	.control-group
-		label.control-label Referencias:
-		.controls-line
-			.controls
-				input(id="txtReference", class="input-extralarge", name="txtReference", type="text")
+.box-white#divImageGallery
+	div.dragger
+		span.note Suelta tus imágenes aquí
+			small Máximo 2 MB por imágen.
+	div.options
+		input(type="text", id="file", name="file", placeholder="No ha elegido ningún archivo")
+		button(class="btn-urb btn-small", type="button", id="btnChoose") Elige tu imagen
+
+.head-ads
+	h2 Videos
+.box-white#divVideoGallery
+		.control-group
+			.cgroup-inline
+				.control-group
+					label.control-label Añadir Video:
+					.controls
+						input(placeholder="Ingrese la url del video", id="txtVideo", class="input-large", name="txtVideo", type="text")
+				.control-group
+					label &nbsp;
+					.controls
+						button(class="btn-urb btn-small", type="button", id="btnAddVideo") Agregar Video
+				p.details Ingresa la URL del video. Ejemplo: http://www.youtube.com/watch?v=R9UW3e30udM
+
+
 .head-ads
 	h2 Detalles Adicionales
 .box-white
@@ -461,3 +481,5 @@ include ../../layout/jade/vars.jade
 .control
 	a(href="javascript:;",class="btn-gray btn-medium", title="Regresar") Regresar
 	a(href="javascript:;",class="btn-urb btn-medium", title="Continuar") Continuar
+.box-white
+	<?php echo $this->tplLoader(); ?>

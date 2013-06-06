@@ -40,8 +40,8 @@ table td{font-family:'lucida_sans_unicoderegular',Arial,sans-serif;padding:0 5px
 .print-package .package-detail p{color:#333;float:left;font-size:11px;line-height:12px;margin:0;width:100%}
 .print-package .package-detail .price{color:#000;float:right;font-size:28px;font-weight:700;line-height:22px}
 .package-img{background:url("../img/icon-set3.png") left top no-repeat;display:inline-block;height:200px;margin-left:15px;width:320px;*display:inline;*zoom:1;*margin-left:28px}
-.details{color:#666;font-size:11px;line-height:17px;margin:10px 0 0}
-.map{margin:0}
+.details{color:#666;font-size:11px;line-height:17px;margin:10px 0 0; clear: both;}
+.map{margin:0; width: 100%; height: 256px; background: green}
 .print-adv{border-bottom:1px solid #000;border-top:1px solid #000;display:inline-block;margin-left:10px;padding:10px 0;width:240px;*padding-bottom:0;*display:inline;*zoom:1;}
 .print-adv h2{color:#000;font:700 12px/13px Arial,sans-serif;margin-bottom:10px}
 .adv-img{margin-bottom:10px}
@@ -248,3 +248,74 @@ table td{font-family:'lucida_sans_unicoderegular',Arial,sans-serif;padding:0 5px
 .list-chk4 input[type="checkbox"]{float:left;margin:2px 6px 0 3px}
 .red{color:#c00}
 .green{color:#090}
+
+
+h2 {
+  border-style: none;
+  border-width: 0 0 1px 0;
+  border-color: #ccc;
+  color: #000;
+  font-size: 20px;
+  font-family: 'trebuchet ms';
+}
+.white-box {
+  background: #fff;
+  padding: 10px;
+}
+.dragger {
+  background: #f2f3f5;
+  cursor: pointer;
+  border: 1px dashed #e0e0e0;
+  border-radius: 3px;
+  padding: 20px 10px 20px 10px;
+  margin: 0 0 15px;
+  text-align: center;
+  float: left;
+  width: 98%;
+}
+.dragger .note {
+  font-size: 1.75em;
+  color: #666;
+  font-family: 'lucida sans unicode';
+  min-height: 130px;
+  line-height: 130px;
+  width: 100%;
+  float: left;
+}
+.dragger .note small {
+  color: #aaa;
+  font-size: 0.4em;
+}
+.thumb {
+  background: #fcfcfc;
+  cursor: pointer;
+  border: 1px dashed #ddd;
+  border-radius: 3px;
+  height: 90px;
+  width: 160px;
+  margin: 20px 17px 0 0;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+.thumb .remove {
+  background: url("../img/remove.png") no-repeat scroll 0 0 transparent;
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -7px;
+  top: -7px;
+}
+.options {
+  clear: both;
+}
+#demoFiler {
+  display: none;
+}
+.tpl {
+  display: block;
+}
+#divVideoGallery{
+	margin-top: 30px;
+}
