@@ -1,0 +1,13 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/include/top-gec.jade
+	include jade/include/header.jade
+
+	#wrapper
+		<?php echo $this->content; ?>
+
+	include jade/include/footer.jade
+
+	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
+	script(data-main="/js/main", src="/js/libs/require/require-min.js", type="text/javascript")
