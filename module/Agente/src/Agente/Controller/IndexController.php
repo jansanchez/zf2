@@ -11,11 +11,20 @@ namespace Agente\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use Agente\Model\Entity\Modelo;
 
 class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
         return new ViewModel();
+    }
+    public function modelAction()
+    {
+    	$m = new Modelo('ini');
+    	$a = $m->getArreglo();
+    	$desde = $m->getDesdeFuera();
+    
+        return new ViewModel(array('texto' => $m->getTexto(), 'a' => $a, 'desde' => $desde));
     }
 }
