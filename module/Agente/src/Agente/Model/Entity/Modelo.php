@@ -3,7 +3,7 @@
 namespace Agente\Model\Entity;
 
 /**
-* 
+* class Modelo
 */
 class Modelo
 {
@@ -33,7 +33,7 @@ class Modelo
 	public function getDesdeFuera(){
 		return $this->desdeFuera;
 	}
-	
+
 }
 
 

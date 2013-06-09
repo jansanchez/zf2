@@ -1,0 +1,32 @@
+<div class="hero-unit">
+<h1>Formulario</h1>
+<?php
+$form = $this->form;
+$form->prepare();
+
+$form->setAttributes(array(
+	'action' => 'recibe',
+	'method' => 'post'
+	));
+echo $this->form()->openTag($form);
+?>
+<?php
+
+
+$nombre = $form->get('txtNombre');
+echo $this->formLabel($nombre);
+echo $this->formInput($nombre);
+
+$apellido = $form->get('txtApellido');
+echo $this->formLabel($apellido);
+echo $this->formInput($apellido);
+
+$enviar = $form->get('btnEnviar');
+echo $this->formInput($enviar);
+
+
+?>
+<?php
+echo $this->form()->closeTag($form);
+?>
+</div>

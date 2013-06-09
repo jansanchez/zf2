@@ -75,7 +75,8 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Application\Controller\Persona' => 'Application\Controller\PersonaController'
+            'Application\Controller\Persona' => 'Application\Controller\PersonaController',
+            'Application\Controller\Formulario' => 'Application\Controller\FormularioController'
         ),
     ),
     'view_manager' => array(
