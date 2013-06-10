@@ -21,6 +21,22 @@ $apellido = $form->get('txtApellido');
 echo $this->formLabel($apellido);
 echo $this->formInput($apellido);
 
+$pass = $form->get('txtPass');
+echo $this->formLabel($pass);
+echo $this->formInput($pass);
+
+$foto = $form->get('filFoto');
+echo $this->formLabel($foto);
+echo $this->formInput($foto);
+
+$genero = $form->get('radGender');
+echo $this->formLabel($genero);
+echo $this->formRadio($genero);
+
+$idioma = $form->get('selIdioma');
+echo $this->formLabel($idioma);
+echo $this->formSelect($idioma);
+
 $enviar = $form->get('btnEnviar');
 echo $this->formInput($enviar);
 

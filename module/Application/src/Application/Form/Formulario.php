@@ -33,9 +33,58 @@ class Formulario extends Form
 		));
 
 		$this->add(array(
-			'name' => 'btnEnviar',
-			'attributes' => array('id' => 'btnEnviar','type'  => 'submit', value => 'Enviar')
+			'name' => 'txtPass',
+			'attributes' => array('id' => 'txtPass','type'  => 'password'),
+			'options' => array('label' => 'Contraseña')
 		));
+
+		$this->add(array(
+			'name' => 'filFoto',
+			'attributes' => array('id' => 'filFoto','type'  => 'file'),
+			'options' => array('label' => 'Foto')
+		));
+
+
+	     $this->add(array(
+             'type' => 'Zend\Form\Element\Radio',
+             'name' => 'radGender',
+             'options' => array(
+                 'label' => 'Cual es tu genero',
+                 'value_options' => array(
+                         '0' => 'Mujer',
+                         '1' => 'Hombre'
+                 )
+             ),
+             'attributes' => array(
+	                'value' => '1'
+	         )
+	     ));
+
+
+		$this->add(array(
+			'type' => 'Zend\Form\Element\Select',
+			'name' => 'selIdioma',
+			'options' => array(
+				'label' => 'Cual es tu idioma',
+					'value_options' => array(
+						'0' => 'French',
+						'1' => 'English',
+						'2' => 'Japanese',
+						'3' => 'Chinese',
+						'4' => 'Español',
+					),
+			),
+			'attributes' => array(
+				'value' => '2'
+			)
+		));
+
+
+		$this->add(array(
+			'name' => 'btnEnviar',
+			'attributes' => array('id' => 'btnEnviar','type'  => 'submit', 'value' => 'Enviar')
+		));
+
 
 
 	}

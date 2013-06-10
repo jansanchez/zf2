@@ -24,6 +24,7 @@ class FormularioController extends AbstractActionController
     public function formularioAction()
     {
     	$form = new Formulario('formulario');
+        //$form->get('selIdioma')->setValueOptions(array('0' => 'uno', '1' => 'dos'));// sobreescribe los options del campo
         return new ViewModel(array('form' => $form));
     }
     public function recibeAction()
