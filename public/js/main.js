@@ -36,6 +36,10 @@ Ins.Models.Collections = Ins.Models.Collections || {};
 */
 
 
+
+
+
+
 String.prototype.clearTpl = function(){
 	return this.toString().replace('data-src', 'src');
 }
@@ -66,12 +70,25 @@ require(['jquery', 'underscore', 'backbone', 'text', 'echo'], function ($, _, Ba
 
 	_.templateSettings = { interpolate : /\{\{(.+?)\}\}/g };
 
-	require(['/js/views/modules/GalleryView.js'],
+
+	window.Urb = {
+		Models: {},
+		Collections: {},
+		Routers: {},
+		Views: {},
+		init: function(){
+			Urb.router = new Urb.Routers.main();
+			Backbone.history.start();
+		}
+	};
+
+	
+/*	require(['/js/views/modules/GalleryView.js'],
 		function (GalleryView){
 			//Creamos una instancia de nuestra galería principal
 			new GalleryView({});
 		}
-	);
+	);*/
 
 	require(['/js/views/modules/GalleryVideo.js'],
 		function (GalleryVideo){
