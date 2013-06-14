@@ -82,13 +82,14 @@ require(['jquery', 'underscore', 'backbone', 'text', 'echo'], function ($, _, Ba
 		}
 	};
 
-	
-/*	require(['/js/views/modules/GalleryView.js'],
+
+	require(['/js/views/modules/GalleryView.js'],
 		function (GalleryView){
 			//Creamos una instancia de nuestra galería principal
 			new GalleryView({});
+			echo("oe no!");
 		}
-	);*/
+	);
 
 	require(['/js/views/modules/GalleryVideo.js'],
 		function (GalleryVideo){
