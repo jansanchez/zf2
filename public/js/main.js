@@ -66,36 +66,53 @@ require.config({
 	}
 });
 
-require(['jquery', 'underscore', 'backbone', 'text', 'echo'], function ($, _, Backbone, text, echo) {
+require(['jquery', 'underscore', 'backbone', 'text', 'echo', 'router'], function ($, _, Backbone, text, echo, router) {
 
 	_.templateSettings = { interpolate : /\{\{(.+?)\}\}/g };
 
+	//definiendo routes
+	router.route("*other", "defaultRoute");
+	router.route("/*", "home");
+	router.route("application/*", "application");
+	router.route("application/persona/publicar-aviso-datos", "publicar-aviso-datos");
 
-	window.Urb = {
-		Models: {},
-		Collections: {},
-		Routers: {},
-		Views: {},
-		init: function(){
-			Urb.router = new Urb.Routers.main();
-			Backbone.history.start();
-		}
-	};
+	// escuchando routes
+	router.on("route:defaultRoute", function() {
+		console.log('ruta por default');
+	});
+	router.on("route:home", function(page) {
+		console.log('home!');
+	});
+
+	router.on("route:publicar-aviso-datos", function(page) {
+		console.log('publicar-aviso-datos');
+
+		// solo cuando estemos en publicar-aviso-datos se haran estos requires
+
+		require(['/js/views/modules/GalleryView.js'],
+			function (GalleryView){
+				//Creamos una instancia de nuestra galería principal
+				new GalleryView({});
+			}
+		);
+
+		require(['/js/views/modules/GalleryVideo.js'],
+			function (GalleryVideo){
+				//Creamos una instancia de nuestra galería principal
+				new GalleryVideo({});
+			}
+		);
+
+	});
 
 
-	require(['/js/views/modules/GalleryView.js'],
-		function (GalleryView){
-			//Creamos una instancia de nuestra galería principal
-			new GalleryView({});
-			echo("oe no!");
-		}
-	);
+	var root = $("[data-main][data-root]").data("root");
+	root = root ? root : '/';
 
-	require(['/js/views/modules/GalleryVideo.js'],
-		function (GalleryVideo){
-			//Creamos una instancia de nuestra galería principal
-			new GalleryVideo({});
-		}
-	);
+	//iniciando Backbone.history
+	Backbone.history.start({
+		pushState: true, // usando pushState para no tener que usar los # en las rutas
+		root: '/'
+	});
 
 });
