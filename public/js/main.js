@@ -87,7 +87,8 @@ require(['jquery', 'underscore', 'backbone', 'text', 'echo', 'router'], function
 	router.on("route:publicar-aviso-datos", function(page) {
 		console.log('publicar-aviso-datos');
 
-		// solo cuando estemos en publicar-aviso-datos se haran estos requires
+		// solo cuando estemos en http://zf2.pe/application/persona/publicar-aviso-datos se harán estos requires
+		// de esa forma solo llamamos a lo que necesitamos, esto vendría a ser como el schema
 
 		require(['/js/views/modules/GalleryView.js'],
 			function (GalleryView){
