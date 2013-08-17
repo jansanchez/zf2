@@ -16,7 +16,7 @@ return array(
                     'route'    => '/agente',
                     'defaults' => array(
                         '__NAMESPACE__' => 'Agente\Controller',
-                        'controller'    => 'Index',
+                        'controller'    => 'Correo',
                         'action'        => 'index',
                     ),
                 ),
@@ -60,7 +60,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Agente\Controller\Index' => 'Agente\Controller\IndexController'
+            'Agente\Controller\Index' => 'Agente\Controller\IndexController',
+            'Agente\Controller\Correo' => 'Agente\Controller\CorreoController',
         ),
     ),
     'view_manager' => array(
@@ -71,7 +72,7 @@ return array(
         'exception_template'       => 'error/index',
         'template_map' => array(
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'agente/index/index' => __DIR__ . '/../view/agente/index/index.phtml',
+            'agente/correo/index' => __DIR__ . '/../view/agente/correo/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml'
         ),

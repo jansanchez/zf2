@@ -32,8 +32,9 @@
   <meta name="DC.Contributor" content="elcomercio.pe"/>
   <meta name="DC.Language" content="es"/><!--[if lt IE 9]>
   <script src="/js/libs/html5/html5.js"></script><![endif]-->
-  <link type="text/css" href="/css/base.css" rel="stylesheet"/>
-  <link type="text/css" href="/css/rocio.css" rel="stylesheet"/>
+  <link type="text/css" href="http://zf2.pe/static/css/layout.css" rel="stylesheet"/>
+  <link type="text/css" href="http://zf2.pe/static/css/portada.css" rel="stylesheet"/>
+  <link type="text/css" href="http://zf2.pe/static/css/publicacion.css" rel="stylesheet"/>
 </head>
 <body>
   <div class="top-gec">
@@ -64,13 +65,15 @@
   </div>
   <header>
     <div class="box-center">
-      <h1 class="head-logo"><a href="http://zf2.pe" title="Urbania el buscador inmobiliario del Perú">Alquiler y Venta de Casas, Departamentos, Habitaciones,  Terrenos, Casas de Playa e Inmuebles del Perú</a></h1><!--form(id="frm_top_search",class="controls-inline")
+      <h1 class="head-logo"><a href="http://zf2.pe/agente/correo" title="Urbania el buscador inmobiliario del Perú">Alquiler y Venta de Casas, Departamentos, Habitaciones,  Terrenos, Casas de Playa e Inmuebles del Perú</a></h1>
+      <!--form(id="frm_top_search",class="controls-inline")
       <div class="controls">
         <input type="text" name="txt-search" placeholder="Buscar por descripción o código de aviso"/>
       </div>
       <div class="controls">
         <button type="submit" class="btn-urb">Buscar</button>
-      </div>-->
+      </div>
+      -->
       <div class="head-info">
         <div class="head-social row"><a href="javascript:;" title="Facebook" class="fb"></a><a href="javascript:;" title="Twitter" class="twt"></a><a href="javascript:;" title="Google+" class="glg"></a></div>
         <p>Lima, Viernes 3 de Mayo del 2013</p>
@@ -87,19 +90,22 @@
         <li><a href="javascript:;" title="Servicios">Servicio</a></li>
       </ul>
     </nav>
-    <div id="sec-menu">
-      <ul class="box-center">
-        <li><a href="/application/persona/index" title="Dashboard">Dashboard</a></li>
-        <li><a href="/application/persona/mi-perfil" title="Mi Perfil">Mi Perfil</a></li>
-        <li><a href="/application/persona/datos-facturacion" title="Mis Avisos">Mis Avisos</a></li>
-        <li><a href="/application/persona/libreta-contactos" title="Mis Pagos">Mis Pagos</a></li>
-        <li><a href="/application/persona/mis-avisos-activos" title="Contactos">Contactos</a></li>
-        <li><a href="/application/persona/publicar-aviso-datos" title="Estadísticas">Estadísticas</a></li>
-        <li><a href="/application/persona/index" title="Oportunidades de Negocio">Oportunidades de Negocio</a></li>
-      </ul>
-    </div>
+    <!--#sec-menu
+    <ul class="box-center">
+      <li><a href="/application/persona/index" title="Dashboard">Dashboard</a></li>
+      <li><a href="/application/persona/mi-perfil" title="Mi Perfil">Mi Perfil</a></li>
+      <li><a href="/application/persona/datos-facturacion" title="Mis Avisos">Mis Avisos</a></li>
+      <li><a href="/application/persona/libreta-contactos" title="Mis Pagos">Mis Pagos</a></li>
+      <li><a href="/application/persona/mis-avisos-activos" title="Contactos">Contactos</a></li>
+      <li><a href="/application/persona/publicar-aviso-datos" title="Estadísticas">Estadísticas</a></li>
+      <li><a href="/application/persona/index" title="Oportunidades de Negocio">Oportunidades de Negocio</a></li>
+    </ul>
+    -->
   </header>
   <div id="wrapper"><?php echo $this->content; ?></div>
+  <div id="divAppData">
+    <p>module: <?php echo $this->layout()->moduleName; ?> - controller: <?php echo $this->layout()->controllerName; ?> - action: <?php echo $this->layout()->actionName; ?></p>
+  </div>
   <div class="fot-decor"></div>
   <footer>
     <div class="box-center">
@@ -286,6 +292,6 @@
       </ul>
     </div>
   </div><?php echo $this->tplLoader(); ?>
-  <!--script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")-->
-  <script data-main="/js/main" src="/js/libs/require/require-min.js" type="text/javascript"></script>
+  <script src="http://zf2.pe/static/js/um/bower_components/requirejs/require.js"></script>
+  <script src="http://zf2.pe/static/js/um/config.js"></script>
 </body>

@@ -7,9 +7,12 @@ body
 	#wrapper
 		<?php echo $this->content; ?>
 
+	#divAppData
+		p module: <?php echo $this->layout()->moduleName; ?> - controller: <?php echo $this->layout()->controllerName; ?> - action: <?php echo $this->layout()->actionName; ?>
+
 	include jade/include/footer.jade
 
 	<?php echo $this->tplLoader(); ?>
 
-	//script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
-	script(data-main="/js/main-built", src="/js/libs/require/require-min.js", type="text/javascript")
+	script(src="http://zf2.pe/static/js/um/bower_components/requirejs/require.js")
+	script(src="http://zf2.pe/static/js/um/config.js")

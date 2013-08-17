@@ -19,6 +19,28 @@ class Module
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+
+        $sharedEvents = $eventManager->getSharedManager();
+
+        $sharedEvents->attach(__NAMESPACE__, 'dispatch', function($e) {
+
+
+            $controller = $e->getTarget();
+            $route = $controller->getEvent()->getRouteMatch();
+
+            //print_r($route);
+            //exit;
+
+            $e->getViewModel()->setVariables(
+                array(
+                    'moduleName' => strtolower(__NAMESPACE__),
+                    'controllerName'=> strtolower($route->getParam('__CONTROLLER__')),
+                    'actionName' => $route->getParam('action', 'index')
+                    )
+            );
+        }, 100);
+      
+
     }
 
     public function getConfig()
