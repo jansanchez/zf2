@@ -1,0 +1,6 @@
+li(data-id="{{= vid}}")
+	a(href="http://www.youtube.com/watch?v={{= vid}}", target="_blank", title="{{= title}}")
+		img(alt="{{= title}}", src="{{= preview}}", width="{{= width}}", height="{{= height}}")
+	a(href="http://www.youtube.com/watch?v={{= vid}}", target="_blank", title="{{= title}}") {{= title}}
+	a(class="remove",href="javascript:;", title="Eliminar") Eliminar
+	input(type="hidden", id="{{= vid}}", name="videos[]", value="{{= vid}}")

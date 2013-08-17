@@ -1,0 +1,1 @@
+yOSON.require={"#frm-DatosTienda":{rules:{txtReason:{required:true,razsoc:true},txtName:{required:true,razsoc:true},txtMail:{required:true,email:true,maxlength:20},txtPhone:{required:true,phone:true}}}};

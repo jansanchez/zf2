@@ -1,0 +1,405 @@
+/**
+* Plugins General
+* @class Plugins
+* @module plugins.css
+*/
+/**
+@module plugins.css
+@submodule Fancybox Plugin
+*/
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp
+	padding: 0
+	margin: 0
+	border: 0
+	outline: none
+	vertical-align: top
+.fancybox-wrap
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 8020
+.fancybox-skin
+	border 10px solid #ccc
+	position: relative
+	background: #fff
+	color: #444
+	text-shadow: none
+	-webkit-border-radius: 4px
+	-moz-border-radius: 4px
+	border-radius: 10px
+.fancybox-opened
+	z-index: 8030
+.fancybox-opened .fancybox-skin
+	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5)
+	-moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5)
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5)
+.fancybox-outer, .fancybox-inner
+	position: relative
+.fancybox-inner
+	overflow: hidden
+.fancybox-type-iframe .fancybox-inner
+	-webkit-overflow-scrolling: touch
+.fancybox-error
+	color: #444
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif
+	margin: 0
+	padding: 15px
+	white-space: nowrap
+.fancybox-image, .fancybox-iframe
+	display: block
+	width: 100%
+	height: 100%
+.fancybox-image
+	max-width: 100%
+	max-height: 100%
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span
+	background-image: url(routImg+'fancybox/fancybox_sprite.png')
+#fancybox-loading
+	position: fixed
+	top: 50%
+	left: 50%
+	margin-top: -22px
+	margin-left: -22px
+	background-position: 0 -108px
+	opacity: 0.8
+	cursor: pointer
+	z-index: 8060
+#fancybox-loading div
+	width: 44px
+	height: 44px
+	background: url(routImg+'fancybox/fancybox_loading.gif') center center no-repeat
+.fancybox-close
+	position: absolute
+	top: -18px
+	right: -18px
+	width: 36px
+	height: 36px
+	cursor: pointer
+	z-index: 8040
+.fancybox-nav
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	background: transparent url(routImg+'fancybox/blank.gif')
+	cursor: pointer
+	height: 80%//100%
+	margin-top: -30%
+	position: absolute
+	text-decoration: none
+	top: 50%
+	width: 10%//40
+	z-index: 8040
+.fancybox-prev
+	left: 0
+.fancybox-next
+	right: 0
+.fancybox-nav span
+	position: absolute
+	top: 50%
+	width: 36px
+	height: 34px
+	margin-top: -18px
+	cursor: pointer
+	z-index: 8040
+	visibility: hidden
+.fancybox-prev span
+	left: 10px
+	background-position: 0 -36px
+.fancybox-next span
+	right: 10px
+	background-position: 0 -72px
+.fancybox-nav:hover span
+	visibility: visible
+.fancybox-tmp
+	position: absolute
+	top: -99999px
+	left: -99999px
+	visibility: hidden
+	max-width: 99999px
+	max-height: 99999px
+	overflow: visible !important
+.fancybox-lock
+	overflow: hidden !important
+	width: auto
+.fancybox-lock body
+	overflow: hidden !important
+.fancybox-lock-test
+	overflow-y: hidden !important
+.fancybox-overlay
+	position: absolute
+	top: 0
+	left: 0
+	overflow: hidden
+	display: none
+	z-index: 8010
+	background: url(routImg+'fancybox/fancybox_overlay.png')
+.fancybox-overlay-fixed
+	position: fixed
+	bottom: 0
+	right: 0
+.fancybox-lock .fancybox-overlay
+	overflow: auto
+	overflow-y: scroll
+.fancybox-title
+	visibility: hidden
+	font: normal 13px/20px Arial,sans-serif
+	position: relative
+	text-shadow: none
+	z-index: 8050
+.fancybox-opened .fancybox-title
+	visibility: visible
+.fancybox-title-float-wrap
+	position: absolute
+	bottom: 0
+	right: 50%
+	margin-bottom: -35px
+	z-index: 8050
+	text-align: center
+.fancybox-title-float-wrap .child
+	display: inline-block
+	margin-right: -100%
+	padding: 2px 20px
+	background: rgba(0, 0, 0, 0.8)
+	-webkit-border-radius: 15px
+	-moz-border-radius: 15px
+	border-radius: 15px
+	text-shadow: 0 1px 2px #222
+	color: #FFF
+	font-weight: bold
+	line-height: 24px
+	white-space: nowrap
+.fancybox-title-outside-wrap
+	color: #dfdddd
+	margin-top: 5px
+	position: relative
+	text-align right
+	.fancybox-title
+		font-size 12px
+		font-variant small-caps
+		font-weight 700
+.fancybox-title-inside-wrap
+	padding-top: 10px
+.fancybox-title-over-wrap
+	position: absolute
+	bottom: 0
+	left: 0
+	color: #fff
+	padding: 10px
+	background: rgba(0, 0, 0, .8)
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5)only screen and (min--moz-device-pixel-ratio: 1.5)only screen and (min-device-pixel-ratio: 1.5)
+	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span
+		background-image: url(routImg+'fancybox/fancybox_sprite@2x.png')
+		background-size: 44px 152px
+	#fancybox-loading div
+		background-image: url(routImg+'fancybox/fancybox_loading@2x.gif')
+		background-size: 24px 24px
+#fancybox-buttons
+	left 0
+	position fixed
+	width 100%
+	z-index 8050
+	&.top
+		top 10px
+	&.bottom
+		bottom 10px
+	ul
+		display block
+		width 91px
+		height 30px
+		margin 0 auto
+		padding 0
+		list-style none
+		border 1px solid #111
+		border-radius 3px
+		box-shadow inset 0 0 0 1px rgba(255,255,255,.05)
+		background rgb(50,50,50)
+		background -moz-linear-gradient(top, rgb(68,68,68) 0%, rgb(52,52,52) 50%, rgb(41,41,41) 50%, rgb(51,51,51) 100%)
+		background -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgb(68,68,68)), color-stop(50%,rgb(52,52,52)), color-stop(50%,rgb(41,41,41)), color-stop(100%,rgb(51,51,51)))
+		background -webkit-linear-gradient(top, rgb(68,68,68) 0%,rgb(52,52,52) 50%,rgb(41,41,41) 50%,rgb(51,51,51) 100%)
+		background -o-linear-gradient(top, rgb(68,68,68) 0%,rgb(52,52,52) 50%,rgb(41,41,41) 50%,rgb(51,51,51) 100%)
+		background -ms-linear-gradient(top, rgb(68,68,68) 0%,rgb(52,52,52) 50%,rgb(41,41,41) 50%,rgb(51,51,51) 100%)
+		background linear-gradient(top, rgb(68,68,68) 0%,rgb(52,52,52) 50%,rgb(41,41,41) 50%,rgb(51,51,51) 100%)
+		filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#222222',GradientType=0 )")
+		li
+			float left
+			margin 0
+			padding 0
+	a
+		display block
+		width 30px
+		height 30px
+		text-indent -9999px
+		background-color transparent
+		background-image url(routImg+'fancybox/fancybox_buttons.png')
+		background-repeat no-repeat
+		outline none
+		opacity 0.8
+		&:hover
+			opacity 1
+		&.btnPrev
+			background-position 5px 0
+		&.btnNext
+			background-position -33px 0
+			border-right 1px solid #3e3e3e
+		&.btnPlay
+			background-position 0 -30px
+		&.btnPlayOn
+			background-position -30px -30px
+		&.btnToggle
+			background-position 3px -60px
+			border-left 1px solid #111
+			border-right 1px solid #3e3e3e
+			width 35px
+		&.btnToggleOn
+			background-position -27px -60px
+		&.btnClose
+			border-left 1px solid #111
+			width 35px
+			background-position -56px 0px
+		&.btnDisabled
+			opacity 0.4
+			cursor default
+/**
+@module plugins.css
+@submodule Tipsy Plugin
+*/
+.tipsy
+	background url(routImg+"tipsy.gif") no-repeat
+	font-size 10px
+	padding 5px
+.tipsy-inner
+	background-color #000
+	color #fff
+	max-width 200px
+	padding 5px 8px 4px
+	text-align center
+.tipsy-north
+	background-position center top
+.tipsy-south
+	background-position center bottom
+.tipsy-east
+	background-position right center
+.tipsy-west
+	background-position left center
+/**
+@module plugins.css
+@submodule Validate Plugin
+*/
+.error
+	border 1px solid #FC9E9E !important
+	background #FDE5E5 !important
+.controls
+	position relative
+input.errorie, select.errorie
+	border 1px solid #FC9E9E !important
+	background #FDE5E5 !important
+em.errorie
+	font-size 10px
+	padding 5px
+	background-color #000
+	color #fff
+	max-width 200px
+	padding 5px 8px 4px
+	text-align center
+	top 32px
+	left 0px
+	position absolute
+/**
+@module plugins.css
+@submodule Slidejs Plugin
+*/
+.slids-content
+	padding-top 10px
+	height 18px
+	.slids-navs
+		float right
+		font-size 0
+		height 18px
+		margin-left 10px
+		width 40px
+	a
+		background url(routImg+"icon-layout.png") no-repeat
+		float left
+		height 18px
+		width 18px
+	.slids-nleft
+		background-position arrSlidsNleft
+		&.disabled
+			background-position arrSlidsNleftDisabled
+	.slids-nrigth
+		background-position arrSlidsNrigth
+		margin-left 4px
+		&.disabled
+			background-position arrSlidsNrigthDisabled
+	.slids-scrollbar
+		background #000
+		float left
+		height 2px
+		margin-top 8px
+		position relative
+	.slids-uiscroll
+		background #000
+		border-radius 4px
+		height 10px
+		left 0
+		position absolute
+		top -4px
+.arrow_box
+	font-size 10px
+	color #fff
+	position relative
+	background #d58686
+	border 1px solid #f55d5d
+	border-radius 5px
+	padding 0 3px
+	margin 9px
+.arrow_box:after, .arrow_box:before
+	right 99%
+	border solid transparent
+	content " "
+	height 0
+	width 0
+	position absolute
+	pointer-events none
+.arrow_box:after
+	border-color rgba(213, 134, 134, 0)
+	border-right-color #d58686
+	border-width 8px
+	top 120%
+	margin-top -19px
+.arrow_box:before
+	border-color rgba(245, 93, 93, 0)
+	border-right-color #f55d5d
+	border-width 9px
+	top 59%
+	margin-top -10px
+/**
+@module loader.css
+@submodule Loader
+*/
+.loader
+	background url(routImg+"opacity.png") repeat
+	border-radius 10px
+	height 100%
+	left 0
+	position absolute
+	top 0
+	width 100%
+	&.fix
+		background #FFF
+	span
+		background url(routImg+"loader.gif") no-repeat
+		display block
+		height 20px
+		left 50%
+		margin -10px 0 0 -10px
+		position absolute
+		top 50%
+		width 20px

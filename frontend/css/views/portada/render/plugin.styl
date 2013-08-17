@@ -1,0 +1,145 @@
+/**
+@module plugins.css
+@submodule Portada
+*/
+/**
+* Slidejs Plugin
+* @class Plugin Sliderjs
+* @module portada.css
+*/
+.slidesjs-pagination
+	height 18px
+	padding-top 10px
+	text-align right
+	li
+		display inline-block
+		*display inline
+		height 18px
+		margin-left 4px
+		vertical-align top
+		width 18px
+		*zoom 1
+		&:first-child
+			margin 0
+	a
+		background #000
+		border-radius 3px
+		display block
+		font-size 0
+		height 18px
+		line-height 0
+		&.active,&:hover
+			background #608828
+/**
+* TextboxList Plugin
+* @class Plugin TextboxList
+* @module portada.css
+*/
+.textboxlist
+	background #FFF
+	border 1px solid #B8B8B8
+	border-radius 4px
+	box-shadow -1px 2px 2px rgba(0, 0, 0, 0.2) inset
+	cursor text
+	padding-top 4px
+	position absolute
+	z-index 200
+	top 100%
+	width 380px
+.textboxlist-bits
+	overflow hidden
+	padding 3px 10px
+	position relative
+	.textboxlist-bit-editable-input
+		border none
+		border-radius 0
+		box-shadow none
+		padding 0
+.textboxlist-bit-box
+	background #CCC
+	border-radius 3px
+	float left
+	font-size 12px
+	height 17px
+	line-height 17px
+	margin-bottom 4px
+	padding 4px 30px 4px 5px
+	position relative
+.see-more
+	background #CCC
+	border-radius 3px
+	color #000
+	font-size 12px
+	height 17px
+	line-height 17px
+	margin-bottom 4px
+	padding 4px 5px
+	top 4px
+	right 4px
+	position absolute
+.textboxlist-bit
+	margin-right 6px
+	&:last-child
+		margin 0
+.textboxlist-bit-box-deletebutton
+	background #333 url(routImg+"icon-portada.png") icoCloseAutocomplete no-repeat
+	border-radius 0 3px 3px 0
+	height 25px
+	position absolute
+	right 0
+	top 0
+	width 25px
+.textboxlist-bit-editable
+	float left
+/*
+.textboxlist-bit-box-focus
+	background-color #D4A0B0
+	color #993300
+	.textboxlist-bit-box-deletebutton
+		background-color #CC0033
+*/
+.textboxlist-autocomplete
+	/*background #FFF
+	border 1px solid #CCC
+	border-radius 4px
+	display none
+	left 0*/
+	padding 10px 0
+	/*position absolute
+	top 100%
+	width 380px*/
+	z-index 10
+	.control
+		padding-top 10px
+.textboxlist-autocomplete-results
+	color #666
+	font-size 11px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	li
+		float left
+		padding 3px 10px
+		vertical-align middle
+		width 170px
+	.selected
+		background-color #fcf3d6
+.textboxlist-autocomplete-highlight
+	color #5F8626
+
+.agt-cboComplete
+	width 300px
+	.textboxlist-bit-editable-input
+		height 26px
+	input[type="text"]
+		padding-left 0
+	.textboxlist-autocomplete-results
+		input[type="checkbox"]
+			margin-right 4px
+			vertical-align top
+	.textboxlist-autocomplete-result-focus
+		background-color #fcf3d6

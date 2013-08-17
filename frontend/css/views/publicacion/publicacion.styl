@@ -1,0 +1,1304 @@
+/**
+* View Publicacion
+* @class Publicacion
+* @module publicacion.css
+*/
+.step-title
+	float left
+	h2
+		font-size 24px
+		line-height 28px
+		margin-bottom 7px
+	p
+		color #333
+		line-height 15px
+		margin 0
+.steps
+	float right
+	overflow hidden
+	padding-bottom 8px
+	position relative
+	li
+		color #666
+		float left
+		font 10px/12px family1
+		text-align center
+		width 62px
+		&.act
+			span
+				background-position publicacionIconStepActive
+	span
+		background url(routImg+"icon-publicacion.png") publicacionIconStep no-repeat
+		display block
+		height 18px
+		margin-top 5px
+		width 62px
+.count-letter
+	color #CC0000
+	float right
+	font-size 12px
+	padding-top 1px
+/**
+@module publicacion.css
+@submodule Box Plan: Caja de planes
+*/
+.box-plan
+	color #333
+	float left
+	margin-left 20px
+	padding-bottom 34px
+	position relative
+	width 170px
+	&:first-child
+		margin 0
+	ul
+		color #000
+		height 258px
+		line-height 14px
+		padding 0 10px
+	li
+		background url(routImg+"icon-publicacion.png") publicacionAIconList no-repeat
+		padding-left 15px
+		margin-top 12px
+		&:first-child
+			margin 0
+.bxpl-head
+	background #FFF
+	font-family family1
+	height 42px
+	margin-bottom 24px
+	padding 30px 0 15px
+	position relative
+	text-align center
+	span
+		background url(routImg+"icon-publicacion.png") publicacionIconAdsYellow no-repeat
+		height 13px
+		left 50%
+		margin-left -28px
+		position absolute
+		top 0
+		width 56px
+	h3
+		color #333
+		font 20px/22px family1
+		margin-bottom 8px
+		text-transform uppercase
+	a
+		color #608828
+		font-size 11px
+		text-decoration underline
+.bxpl-decorate
+	background url(routImg+"icon-publicacion.png") publicacionIconDecorAdsYellow no-repeat
+	height 14px
+	left 50%
+	margin-left -30px
+	position absolute
+	top 87px
+	width 60px
+.bxpl-price
+	background #FFFFAA
+	border 4px solid #FFC72C
+	border-radius 6px
+	color #000
+	display block
+	font 700 20px/36px family1
+	height 36px
+	margin 0 auto 18px
+	text-align center
+	width 128px
+	a
+		color #000
+		display block
+		&:hover
+			background #fefe67
+			text-decoration none
+.bxpl-ads
+	background url(routImg+"bg-opacity.png")
+	height 54px
+	line-height 14px
+	margin-bottom 12px
+	padding 10px 10px 0
+	text-align center
+.bxpl-info
+	color #000
+	display block
+	font-weight 700
+	text-align center
+	text-decoration underline
+.bxpl-btn
+	background #fb960a
+	background unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZiOTYwYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlZTdkMjEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)")
+	background -moz-linear-gradient(top,  #fb960a 0%, #ee7d21 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fb960a), color-stop(100%,#ee7d21))
+	background -webkit-linear-gradient(top,  #fb960a 0%,#ee7d21 100%)
+	background -o-linear-gradient(top,  #fb960a 0%,#ee7d21 100%)
+	background -ms-linear-gradient(top,  #fb960a 0%,#ee7d21 100%)
+	background linear-gradient(to bottom,  #fb960a 0%,#ee7d21 100%)
+	border 2px solid #DD570E
+	border-radius 5px
+	bottom -22px
+	color #FFF
+	display block
+	font 400 18px/40px family3
+	height 40px
+	left 50%
+	margin-left -70px
+	position absolute
+	text-align center
+	width 136px
+	&:hover
+		text-decoration none
+		background #ee7d21
+		background unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlN2QyMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmYjk2MGEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)")
+		background -moz-linear-gradient(top,  #ee7d21 0%, #fb960a 100%)
+		background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ee7d21), color-stop(100%,#fb960a))
+		background -webkit-linear-gradient(top,  #ee7d21 0%,#fb960a 100%)
+		background -o-linear-gradient(top,  #ee7d21 0%,#fb960a 100%)
+		background -ms-linear-gradient(top,  #ee7d21 0%,#fb960a 100%)
+		background linear-gradient(to bottom,  #ee7d21 0%,#fb960a 100%)
+.bxpl-yellow
+	background #FFE16A
+	border 1px solid #FFE16A
+.bxpl-gray
+	background #D3D2D7
+	border 1px solid #D3D2D7
+	.bxpl-head
+		span
+			background-position publicacionIconAdsGray
+	.bxpl-decorate
+		background-position publicacionIconDecorAdsGray
+	.bxpl-price
+		border-color #AFADB5
+.bxpl-orange
+	background #EBA469
+	border 1px solid #EBA469
+	.bxpl-head
+		span
+			background-position publicacionIconAdsOrange
+	.bxpl-decorate
+		background-position publicacionIconDecorAdsOrange
+	.bxpl-price
+		border-color #D9692B
+.bxpl-blue
+	background #86CCE3
+	border 1px solid #86CCE3
+	.bxpl-head
+		span
+			background-position publicacionIconAdsBlue
+	.bxpl-decorate
+		background-position publicacionIconDecorAdsBlue
+	.bxpl-price
+		border-color #46A3CA
+.bxpl-green
+	background #BADA8F
+	border 1px solid #BADA8F
+	.bxpl-head
+		span
+			background-position publicacionIconAdsGreen
+	.bxpl-decorate
+		background-position publicacionIconDecorAdsGreen
+	.bxpl-price
+		border-color #88BA50
+div[data-color],div[data-img]
+	display none
+#more-information
+	p
+		line-height 15px
+/**
+@module publicacion.css
+@submodule Combo Impreso
+*/
+.cbo-printed
+	float left
+	width 584px
+	label
+		float left
+		margin-top 10px
+		padding 12px 0
+		position relative
+		width 100%
+		&:first-child
+			margin 0
+	input[type="radio"]
+		float left
+		margin 8px 0 0 5px
+	h3
+		font-size 20px
+		font-weight 700
+		margin-bottom 4px
+		span
+			color #FF0000
+	.cbop-content
+		float left
+		margin-left 5px
+		width 405px
+	p
+		color #333
+		font-size 11px
+		line-height 14px
+		margin 0
+	.price
+		font-size 28px
+		font-weight 700
+		position absolute
+		z-index 2
+		right 6px
+		top 10px
+.cbop-yellow
+	background #FFE16A
+.cbop-green
+	background #BADA8F
+.cbop-orange
+	background #EBA469
+.box-white
+	.cbo-public
+		color #666
+		font-size 12px
+		line-height 17px
+		margin 0
+		padding-top 10px
+		span
+			color #FF0000
+	p
+		&.details
+			clear both
+			color #666
+			font-size 11px
+			line-height 17px
+			margin-bottom 0
+			padding 10px 0 0
+	&.nopadding
+		padding 0
+	&.mg0
+		margin 0
+.cbo-img
+	background url(routImg+"icon-set3.png") no-repeat
+	float right
+	height 200px
+	width 320px
+/**
+* mientras tanto
+*/
+.box-hidden
+	display none
+.box-show
+	display block
+	margin-top 30px
+/**
+@module publicacion.css
+@submodule paso 2
+*/
+.fix-help
+	color #626262
+	font-size 13px
+	line-height 30px
+.customfile-wrap
+	display inline-block
+	*display inline
+	*zoom 1
+#tipPhotos
+	width 350px
+	float right
+	display inline-block
+	*display inline
+	*zoom 1
+	h2,p
+		font-family family1
+		color #666
+		font-size 12px !important
+		line-height 14px !important
+		margin 5px 0
+.imgload
+	float left
+	width 520px
+	p
+		color #666
+		font-size 11px
+		line-height 17px
+		margin 0
+/**
+@module publicacion.css
+@submodule paso 4 Verifica tus datos
+*/
+.list-details
+	margin 10px 10px 0
+	li
+		background url(routImg+"icon-publicacion.png") publicacionListDetails no-repeat
+		line-height 14px
+		margin-bottom 15px
+		padding-left 15px
+.sub-price
+	border-top solid 1px #ccc
+	color #000
+	font-size 18px
+	font-weight 700
+	line-height 20px
+	margin 15px 10px 20px
+	padding-top 10px
+	text-align right
+.logo-perured
+	background url(routImg+"icon-portada.png") icoPerured no-repeat
+	float left
+	height 25px
+	margin -7px 0 0 5px
+	width 60px
+.help-box
+	background url(routImg+"icon-layout.png") helpCode no-repeat
+	color transparent
+	float left
+	font-size 0
+	line-height 0
+	height 14px
+	margin-left 10px
+	width 14px
+	&:hover
+		background url(routImg+"icon-layout.png") helpCodeHover no-repeat
+.fleft
+	float left
+.perured-details
+	margin-left 22px
+	p
+		font-size 12px
+		margin-bottom 7px
+	li
+		float left
+		margin-bottom 5px
+		width 110px
+.price-right
+	color #666
+	float right
+.improve-adv
+	padding 15px 10px 10px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	&.gray
+		background-color #F2F3F5
+	&.yellow
+		background-color #FFFDD2
+		border-top 1px solid #ccc
+	h3
+		font 700 14px/15px family1
+		color #333
+		margin-bottom 15px
+.improve-detail
+	line-height 14px
+	padding-bottom 10px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	input[type="checkbox"]
+		float left
+		margin-right 10px
+	.text-left
+		float left
+	.tit-pack
+		float left
+		font-size 14px
+.total-price
+	color #000
+	font-size 28px
+	line-height 28px
+	text-align right
+	span
+		color #CC0000
+.tit-pay
+	font 700 14px/15px family1
+	color #333
+	margin-bottom 15px
+.pay-detail
+	padding-bottom 15px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	input[type="radio"]
+		float left
+		margin 12px 15px 0 0
+		*margin 9px 15px 0 0
+.pay-txt
+	float left
+	margin-left 15px
+	width 400px
+	p
+		float left
+		font-size 12px
+		line-height 15px
+		margin 0
+		&.mt10
+			margin-top 10px
+	a
+		float left
+		margin-top 4px
+	&.mt5
+		margin-top 5px
+#divVideoGallery
+	p
+		color #666
+		font-size 11px
+		line-height 17px
+		margin 6px 0 0
+		float left
+		width 100%
+.details
+	color #666
+	font-size 11px
+	line-height 17px
+	margin 10px 0 0
+.pay-logos
+	background url(routImg+"icon-layout.png")
+	float left
+	height 40px
+	width 64px
+	&.pago-efectivo
+		background-position publicacionPayLogosPe
+	&.visa
+		background-position publicacionPayLogosVisa
+	&.mastercard
+		background-position publicacionPayLogosMaster
+.verified
+	background url(routImg+"icon-layout.png") publicacionPayLogosVbVisa no-repeat
+	float left
+	height 26px
+	margin-left 10px
+	width 47px
+.txt-small
+	color #666
+	float left
+	font-size 11px
+	line-height 11px
+	*width 100%
+.safe-box
+	font-family family3
+	margin 40px auto 0
+	width 710px
+	p
+		background url(routImg+"icon-publicacion.png") publicacionSavePlace no-repeat
+		color #666
+		display inline-block
+		font-size 13px
+		line-height 24px
+		margin 13px 0 0
+		padding-left 25px
+		vertical-align top
+		*display inline
+		*zoom 1
+.icons-safe
+	background url(routImg+"icon-layout.png")
+	display inline-block
+	height 45px
+	margin-left 18px
+	*display inline
+		*zoom 1
+	&.ssl
+		background-position publicacionIsafeSsl
+		width 44px
+	&.kaspersky
+		background-position publicacionIsafekaspersky
+		width 43px
+	&.verisign
+		background-position publicacionIsafeVerisign
+		width 90px
+/**
+@module publicacion.css
+@submodule Aviso impreso
+*/
+.adv-impress
+	border-bottom 1px solid #000
+	border-top 1px solid #000
+	float left
+	margin-left 10px
+	padding 10px 0
+	position relative
+	width 240px
+	h2
+		font 700 12px family3
+		margin-bottom 8px
+.advi-content
+	border 2px dashed #333
+	border-radius 5px
+	font-size 11px
+	height 55px
+	margin-bottom 5px
+	padding 8px
+	position relative
+	span
+		color #333
+		left 8px
+		line-height 13px
+		position absolute
+		top 8px
+		z-index 2
+	textarea
+		border none
+		border-radius 0
+		box-shadow none
+		font-size 11px
+		height 55px
+		left 8px
+		line-height 13px
+		padding 0
+		position absolute
+		text-indent 42px
+		top 8px
+		width 220px
+		z-index 1
+		&.fix
+			text-indent 0
+		&.char2
+			text-indent 50px
+	p
+		color #999
+		cursor pointer
+		font 11px family3
+		height 49px
+		left 8px
+		margin 0
+		padding-top 6px
+		position absolute
+		text-align center
+		top 8px
+		width 220px
+		z-index 3
+.advi-img
+	margin-bottom 6px
+	img
+		height 135px
+		width 240px
+.advi-code
+	color #333
+	float left
+	font 700 12px family3
+	&.fix
+		float right
+.advi-details
+	float left
+	margin-left 20px
+	padding-top 10px
+	li
+		background url(routImg+"icon-publicacion.png") publicacionListDetails no-repeat
+		font-size 14px
+		line-height 16px
+		margin-top 10px
+		padding-left 13px
+		&:first-child
+			margin 0
+.contact-data
+	background #FAFBFE
+	border 1px solid #E8E8E8
+	padding 10px
+.img-data
+	display inline-block
+	margin-right 20px
+	vertical-align top
+	width 160px
+	*display inline
+	*zoom 1
+.data-details
+	display inline-block
+	line-height 13px
+	margin 20px 10px 0
+	vertical-align top
+	width 330px
+	*display inline
+	*zoom 1
+	dt
+		color #666
+		float left
+		padding 5px 0
+	dd
+		color #000
+		margin-left 80px
+		padding 5px 0
+.thanks
+	margin-bottom 0
+	padding-bottom 50px
+	text-align center
+	h3
+		color #5F8626
+		font 400 36px/37px family1
+		margin 20px 0 30px
+	.btn-urb
+		margin 0 15px
+.data-transaction
+	width 370px
+	margin 20px auto
+	h3
+		color #5F8626
+		font 400 22px/23px family1
+		margin-bottom 25px
+		text-align center
+	dt
+		color #666
+		float left
+		line-height 15px
+		padding 5px 0
+	dd
+		color #000
+		line-height 15px
+		margin-left 150px
+		padding 5px 0
+/**
+* Dashboard Section
+* @class Dashboard
+*/
+.profile-pic
+	background url(routImg+"pic1.png") left top no-repeat #F2F3F5
+	color #666
+	font-size 16px
+	height 124px
+	line-height 123px
+	text-align center
+	a
+		color #666
+	img
+		height 123px
+		width 218px
+.profile-name
+	margin 10px 0 0 15px
+	h3
+		color #000
+		font 700 14px/15px family1
+		margin-bottom 4px
+.prof-adv
+	margin 20px 0 0 15px
+	width 190px
+	li
+		line-height 20px
+		margin-bottom 10px
+	a
+		color #000
+		&:hover
+			color #999
+			text-decoration none
+.quant
+	background #EB1F26
+	border-radius 4px
+	color #fff
+	float right
+	font-size 12px
+	line-height 20px
+	a
+		border-radius 4px
+		color #fff
+		padding 0 6px
+		&:hover
+			background #fa4147
+			color #fff
+		&.dis
+			background #666
+			color #999
+			cursor default
+	&.bgblack
+		background #000
+		border-radius 4px
+		a
+			border-radius 4px
+			color #fff
+			padding 0 6px
+			&:hover
+				background #333
+				color #fff
+			&.dis
+				background #666
+				color #999
+				cursor default
+.profile-menu
+	margin-bottom 20px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	li
+		float left
+		margin 0 0 10px 20px
+		width 220px
+		&:nth-child(3n+1)
+			margin-left 0
+		&:hover
+			cursor pointer
+		&.dis
+			a, span
+				cursor default
+			&:hover
+				cursor default
+	a
+		color #fff
+		display block
+		font-size 16px
+		height 50px
+		line-height 19px
+		padding 10px 0 0 20px
+		transition all 0.3 ease
+		&:hover
+			text-decoration none
+.lh
+	line-height 37px
+.bgd-perfil
+	background-color #608828
+	&:hover
+		background-color #6e9636	
+	&.dis
+		background-color #bfcfa9
+.bgd-inmuebles
+	background-color #9B6409
+	&:hover
+		background-color #a57525
+	&.dis
+		background-color #c19348
+.bgd-citas
+	background-color #2222FF
+	&:hover
+		background-color #3e3efd
+	&.dis
+		background-color #7f7fff
+.bg-green
+	background-color #6FC608
+	&:hover
+		background-color #8add28
+	&.dis
+		background-color #c5e89c
+.bg-yll
+	background-color #FFCC00
+	&:hover
+		background-color #feda49
+	&.dis
+		background-color #ffeb99
+.bg-org
+	background-color #FF9B2E
+	&:hover
+		background-color #feb361
+.bgd-facturacion
+	background-color #0099CC
+	&:hover
+		background-color #15a9da
+	&.dis
+		background-color #99d6eb
+.bg-red
+	background-color #EB1F26
+	&:hover
+		background-color #fd5056
+.bg-gray
+	background-color #647587
+	&:hover
+		background-color #7f8fa0
+	&.dis
+		background-color #c1c8cf
+.bg-purple
+	background-color #6A59A7
+	&:hover
+		background-color #7768b0
+	&.dis
+		background-color #c3bddc
+.bg-lorg
+	background-color #EB7617
+	&:hover
+		background-color #ff8d31
+	&.dis
+		background-color #f7c8a2
+.bg-bl
+	background-color #1780FF
+	&:hover
+		background-color #5ea6fe
+	&.dis
+		background-color #a2ccff
+.icons-prof
+	background url(routImg+"icon-publicacion.png") no-repeat
+	float left
+	height 37px
+	margin-right 25px
+	width 32px
+	&:hover
+		cursor pointer
+	&.data
+		background-position icoDashboardInfo
+	&.properties
+		background-position icoDashboardProperty
+		margin-right 16px
+		width 41px
+	&.orders
+		background-position icoDashboardOrders
+		margin-right 16px
+		width 41px
+	&.dating
+		background-position icoDashboardDating
+		margin-right 21px
+		width 36px
+	&.orders
+		background-position icoDashboardOrders
+		margin-right 16px
+		width 41px
+	&.favorite
+		background-position icoDashboardPropertyfavorites
+	&.alert
+		background-position icoDashboardAlerts
+		margin-right 21px
+		width 36px
+	&.fact
+		background-position icoDashboardBilling
+	&.pay
+		background-position icoDashboardPayments
+	&.adv
+		background-position icoDashboardAds
+	&.contac
+		background-position icoDashboardContacts
+	&.msg
+		background-position icoDashboardMessages
+	&.stdts
+		background-position icoDashboardStatistics
+.profile-type
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	li
+		float left
+		margin-left 15px
+		text-align center
+		width 150px
+		&:first-child
+			margin-left 0
+	a
+		background: #d7d7d7;
+		background: -moz-linear-gradient(top,  #d7d7d7 0%, #b2b2b2 98%, #b2b2b2 100%)
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d7d7d7), color-stop(98%,#b2b2b2), color-stop(100%,#b2b2b2))
+		background: -webkit-linear-gradient(top,  #d7d7d7 0%,#b2b2b2 98%,#b2b2b2 100%)
+		background: -o-linear-gradient(top,  #d7d7d7 0%,#b2b2b2 98%,#b2b2b2 100%)
+		background: -ms-linear-gradient(top,  #d7d7d7 0%,#b2b2b2 98%,#b2b2b2 100%)
+		background: linear-gradient(to bottom,  #d7d7d7 0%,#b2b2b2 98%,#b2b2b2 100%)			
+		border-radius 5px
+		color #666
+		display block
+		padding 6px 0
+		&:hover, &.act
+			text-decoration none
+			background #ff9b2e
+			background unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1JSIgc3RvcC1jb2xvcj0iI2ZmOWIyZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjkwJSIgc3RvcC1jb2xvcj0iI2ZmN2YxOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYjc2MTciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)")
+			background -moz-linear-gradient(top, #ff9b2e 5%, #eb7617 90%, #eb7617 100%)
+			background -webkit-gradient(linear, left top, left bottom, color-stop(5%,#ff9b2e), color-stop(90%,#eb7617), color-stop(100%,#eb7617))
+			background -webkit-linear-gradient(top, #ff9b2e 5%,#eb7617 90%,#eb7617 100%)
+			background -o-linear-gradient(top, #ff9b2e 5%,#eb7617 90%,#eb7617 100%)
+			background -ms-linear-gradient(top, #ff9b2e 5%,#eb7617 90%,#eb7617 100%)
+			background linear-gradient(to bottom, #ff9b2e 5%,#eb7617 90%,#eb7617 100%)
+			color #fff
+			text-shadow 0 2px 1px #ab4d01
+.type-name
+	font 700 11px/12px family3
+	margin 0
+.type-nmperson
+	font 700 14px/16px family3
+	margin 0
+/**
+* Estadisticas
+* @class Estadisticas
+* @module publicacion.css
+*/
+.stadist-options
+	float left
+	text-align left
+	width 190px
+	li
+		margin 10px 0 0 10px
+	.ioption
+		font-size 12px
+.stadistics-rating
+	float right
+	width 700px
+.show-stadistics
+	margin-bottom 20px
+	label
+		display inline-block
+		line-height 30px
+		vertical-align top
+		*display inline
+		*zoom 1
+	.controls
+		display inline-block
+		margin-left 10px
+		vertical-align top
+		*display inline
+		*zoom 1
+.arrs-act
+	&:hover
+		& > .arr-show
+			background-position icoArrHide
+.arrs-desact
+	&:hover
+		& > .arr-hide
+			background-position icoArrShow
+.arr-show
+	background url(routImg+"icon-layout.png") icoArrShow no-repeat
+	height 9px
+	margin-top -6px
+	position absolute
+	width 16px
+	z-index 2
+.arr-hide
+	background url(routImg+"icon-layout.png") icoArrHide no-repeat
+	height 9px
+	margin-top -6px
+	position absolute
+	width 16px
+	z-index  2
+/**
+* Agente Tienda
+* @class Agente Tienda
+* @module publicacion.css
+*/
+.titmov-box
+	background #F3F3F3
+	cursor pointer
+	display block
+	padding 10px
+	position relative
+	&:hover, &.act
+		background #f5fbee
+	&.act
+		.arrows
+			background-position icoArrHide
+	h2
+		color #333
+		font 18px/20px family1
+		margin 0
+.arrows
+	background url(routImg+"icon-layout.png") icoArrShow no-repeat
+	height 9px
+	position absolute
+	right 10px
+	top 16px
+	width 16px
+.accordion
+	background #fff
+	border 1px solid #E8E8E8
+	margin-bottom 30px
+	li
+		border-top 1px solid #ccc
+		&:first-child
+			border-top none
+.mov-box
+	padding 20px 10px 10px
+	position relative
+	.sel-lmiddle
+		margin-right 10px
+.highlight-boxes
+	border-bottom 1px solid #ccc
+	margin-bottom 25px
+	padding 10px 15px 25px
+#slide-highlight
+	//margin 0 auto 25px
+	overflow hidden
+	//padding 10px 0 25px
+	position relative
+	width 888px
+.mov-ads
+	float left
+	margin-left 28px
+	position relative
+	width 200px
+	&:first-child
+		margin 0
+	.slids-content
+		padding 10px 0 0 70px
+		height 18px
+		.slids-navs
+			float left
+			margin-left 10px
+			width 40px
+	.sort-nleft
+		background-position arrSlidsNleft
+		&.disabled
+			background-position arrSlidsNleftDisabled
+	.sort-nrigth
+		background-position arrSlidsNrigth
+		margin-left 4px
+		&.disabled
+			background-position arrSlidsNrigthDisabled
+.highlight-box
+	background #FFF
+	border 1px solid #ececec
+	box-shadow 0px 2px 3px #ccc
+	height 200px
+	width 200px
+.highlight-img
+	margin-bottom 20px
+	img
+		display block
+		height 113px
+		width 200px
+.highlight-title
+	margin-left 10px
+	width 180px
+	h2
+		color #5F8626
+		font 14px /15px family1
+		margin-bottom 6px
+	p
+		color #666
+		margin 0
+.btn-closebox
+	background url(routImg+"icon-layout.png") icoCloseBox no-repeat
+	font-size 0
+	height 20px
+	position absolute
+	right -7px
+	top -7px
+	width 20px
+	z-index 1
+	&:hover
+		background-position icoCloseBoxHover
+.certificate-box
+	background #f2f3f5
+	border 2px dashed #e0e0e0
+	border-radius 8px
+	margin-bottom 15px
+	padding 15px 10px
+	min-height 84px
+	.item-certif
+		background #fff
+		border 1px solid #E8E8E8
+		float left
+		margin 0 10px
+		padding 10px
+		text-align center
+		width 112px
+		position relative
+.byconfirm
+	background url(routImg+"opacity.png") repeat
+	color #CC0000
+	font-size 12px
+	font-weight 700
+	height 57px
+	left 0
+	line-height 15px
+	margin-bottom 0
+	padding-top 25px
+	position absolute
+	text-align center
+	top 0
+	width 112px
+	z-index 1
+.choose-img
+	position absolute
+	right 20px
+	top 20px
+	width 220px
+	z-index 3
+.here-img
+	margin-bottom 10px
+	text-align center
+	width 220px
+/**
+* Agente Paquetes
+* @class Agente Paquetes
+* @module publicacion.css
+*/
+.my-packs
+	margin-bottom 0
+	h2
+		color #000
+		font 700 16px/18px family1
+		margin-bottom 6px
+		text-align left
+		span
+			color #CC0000
+	p
+		color #666
+		font-size 12px
+		line-height 15px
+		margin-bottom 15px
+	dl
+		line-height 13px
+		margin 0 auto
+		width 100px
+		dt
+			float left
+			padding 3px 0
+		dd
+			margin-left 65px
+			padding 3px 0
+			text-align right
+	.tbl-admin
+		margin-bottom 30px
+		&:last-child
+			margin-bottom 0
+	.tdMypacks
+		h2
+			margin 0 0 0 10px
+.packs-bgyellow
+	td
+		background #FCF4DB
+.packs-bggray
+	td, h2
+		background #F2F3F5
+		color #666
+	.linediv
+		border-top 1px solid #666
+.linediv
+	border-top 1px solid #000
+	display block
+	margin 4px auto
+	width 100px
+.box-lnk
+	&:hover
+		text-decoration none
+.box-adpacks
+	background #f7f7f9
+	border 1px solid #D3D2D7
+	display inline-block
+	height 600px
+	margin 20px 60px 0
+	position relative
+	transition box-shadow 120ms ease-in
+	vertical-align top
+	width 340px
+	*display inline
+	*zoom 1
+	h2
+		color #333
+		font 700 20px/22px family1
+		margin 25px 0
+		text-align center
+	&.yellow
+		border 1px solid #FFE16A
+	&:hover
+		box-shadow -3px 4px 6px #ababab
+.img-adpacks
+	background url(routImg+"icon-set3.png") -13px 0 no-repeat
+	height 190px
+	margin 0 auto
+	width 289px
+	&.img-web
+		background-position 0 -380px
+		height 207px
+.adpacks-info
+	background #d3d2d7
+	height 210px
+	left 0
+	padding 25px
+	position absolute
+	bottom 0
+	&.yw
+		background #FFE16A
+	h3
+		color #333
+		font 700 16px/17px family1
+		margin-bottom 15px
+	p
+		color #333
+		font-size 14px
+		line-height 16px
+.head-oportunity
+	background #fff
+	border-bottom 1px solid #D3D2D7
+	margin-bottom 25px
+	position relative
+	&.byw
+		border-bottom 1px solid #FFE16A
+.top-arrow
+	background url(routImg+"icon-publicacion.png") publicacionIconAdsGray no-repeat
+	height 13px
+	margin 0 auto
+	width 56px
+	&.yw
+		background-position publicacionIconAdsYellow
+.bottom-arrow
+	background url(routImg+"icon-set3.png") -409px -222px no-repeat
+	height 16px
+	left 137px
+	margin 0 auto
+	position absolute
+	width 64px
+	z-index 3
+	&.yw
+		background-position -409px -238px
+.pack-web
+	margin-left 5px
+	.box-plan
+		width 210px
+		.text-detail
+			font-size 13px
+			line-height 14px
+		ul
+			background url(routImg+"bg-opacity.png")
+			height 70px
+			margin-bottom 20px
+			padding 10px
+			&.webimpreso
+				height 120px
+	.bxpl-head
+		height 60px
+		padding-top 20px
+		h3
+			&.mth3
+				padding-top 10px
+	.bxpl-decorate
+		top 95px
+.discount
+	color #CC0000
+	font-size 21px
+	font-weight 700
+	line-height 22px
+	margin-bottom 10px
+	text-align center
+/* Video - Paso 2 */
+#olVideoList
+	margin 15px 0 0 0
+	&:empty
+		display none
+	li
+		margin 5px 0 0 0
+		//display none
+		a
+			height 65px
+			width 90px
+			&.remove
+				background url(routImg+"remove.png") no-repeat scroll 0 0 transparent
+				display inline-block
+				height 20px
+				margin 23px 0 0 15px
+				text-indent -999px
+				vertical-align top
+				width 20px
+				*display inline-block
+				*zoom 1
+				outline 0
+				font-size 0
+				line-height 0
+		img
+			border 1px solid #DDDDDD
+			margin 0 10px 0 2px
+#divVideoGallery
+	.control-group
+		margin-right 10px
+#exampleAvisoImpreso
+	padding 5px 0 5px 0
+	display block
+	border-bottom 1px solid #000
+	border-top 1px solid #000
+	width 246px
+	margin 26px auto 0px
+	text-align justify
+	line-height 12px
+	font-size 11px
+	span
+		display block
+		font-weight bold
+		font-size 12px
+		margin-bottom 7px

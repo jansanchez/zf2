@@ -1,0 +1,202 @@
+
+<script type="text/javascript">
+  var tmp={<?php echo implode(',', $tmp)?>};
+  var Urbmail={totalmsg:400,page:50};
+  
+</script>
+
+<div class="head-adm">
+  <h2 class="mb10">Mensajes</h2>
+  <form id="frmSearch" class="filter-adm" onSubmit="return false;">
+    <div class="controls">
+      <input type="text" name="txtSearch" id="txtSearch" placeholder="Busca Mensaje"/>
+      <label for="txtSearch" class="vglass"></label>
+    </div>
+    <div class="controls">
+      <button id="btnSearch" type="button" class="btn-urb btn-small">Buscar</button>
+    </div>
+  </form>
+</div>
+<div class="opts-hadmin row">
+  <div class="box-left">
+    <div class="btn-group"><a href="javascript:;" class="dropdown-toggle">
+        <input type="checkbox" name="chkSelect" id="chkSelect"/><span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="javascript:;">Todo</a></li>
+        <li><a href="javascript:;">Nada</a></li>
+        <li><a href="javascript:;">Leído</a></li>
+        <li><a href="javascript:;">No Leído</a></li>
+      </ul>
+    </div>
+    <div class="btn-group act"><a href="javascript:;" class="dropdown-toggle"><span class="icon-filter"></span><span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="javascript:;">No leídos</a></li>
+        <li><a href="javascript:;">Leídos</a></li>
+        <li><a href="javascript:;">Importantes</a></li>
+      </ul>
+    </div><a href="javascript:;" title="Exportar a Excel" class="btn-gray">Actualizar</a><a href="javascript:;" title="Eliminar" class="btn-gray">Ver todos los Mensajes</a>
+  </div>
+  <div class="box-rigth mail-paginator"><a href="javascript:;" title="Anterior" class="mail-previous dis"></a><a href="javascript:;" title="Siguiente" class="mail-next"></a></div>
+</div>
+<div class="row">
+  <div class="grids-4 ctn-listmail">
+    <div class="ml-paginator">
+      <div class="mlp-pages">1-50 de 401</div>
+      <div class="mlp-navs"><a href="javascript:;" class="mpnavs-left dis"></a><span>Página 1</span><a href="javascript:;" class="mpnavs-rigth"></a></div>
+    </div>
+    <div class="row">
+      <ul class="ml-list">
+        <li class="mlist-el">
+          <input type="checkbox"/>
+          <div class="mlist-head">
+            <h2>Blanca Nieves<a href="javascript:;" title="destacar" class="icon-detasq act"></a></h2>
+            <time>10:47 am</time>
+          </div>
+          <p>Venta de Casa en Santiago de Surco</p>
+        </li>
+        <li class="mlist-el act">
+          <input type="checkbox"/>
+          <div class="mlist-head">
+            <h2>Blanca Nieves<a href="javascript:;" title="destacar" class="icon-detasq"></a></h2>
+            <time>10:47 am</time>
+          </div>
+          <p>Venta de Casa en Santiago de Surco</p>
+          <p class="mlist-attach"><span></span>propuesta.pdf</p>
+        </li>
+        <li class="mlist-el ml-read">
+          <input type="checkbox"/>
+          <div class="mlist-head">
+            <h2>Blanca Nieves<a href="javascript:;" title="destacar" class="icon-detasq"></a></h2>
+            <time>10:47 am</time>
+          </div>
+          <p>Venta de Casa en Santiago de Surco</p>
+        </li>
+        <li class="mlist-el ml-read">
+          <input type="checkbox"/>
+          <div class="mlist-head">
+            <h2>Blanca Nieves<a href="javascript:;" title="destacar" class="icon-detasq"></a></h2>
+            <time>10:47 am</time>
+          </div>
+          <p>Venta de Casa en Santiago de Surco</p>
+        </li>
+        <li class="mlist-el ml-read">
+          <input type="checkbox"/>
+          <div class="mlist-head">
+            <h2>Blanca Nieves<a href="javascript:;" title="destacar" class="icon-detasq"></a></h2>
+            <time>10:47 am</time>
+          </div>
+          <p>Venta de Casa en Santiago de Surco</p>
+        </li>
+        <li class="mlist-el ml-read">
+          <input type="checkbox"/>
+          <div class="mlist-head">
+            <h2>Blanca Nieves<a href="javascript:;" title="destacar" class="icon-detasq"></a></h2>
+            <time>10:47 am</time>
+          </div>
+          <p>Venta de Casa en Santiago de Surco</p>
+        </li>
+        <li class="mlist-el ml-read">
+          <input type="checkbox"/>
+          <div class="mlist-head">
+            <h2>Blanca Nieves<a href="javascript:;" title="destacar" class="icon-detasq"></a></h2>
+            <time>10:47 am</time>
+          </div>
+          <p>Venta de Casa en Santiago de Surco</p>
+        </li>
+        <li class="mlist-el ml-read">
+          <input type="checkbox"/>
+          <div class="mlist-head">
+            <h2>Blanca Nieves<a href="javascript:;" title="destacar" class="icon-detasq"></a></h2>
+            <time>10:47 am</time>
+          </div>
+          <p>Venta de Casa en Santiago de Surco</p>
+        </li>
+        <li class="mlist-el ml-read">
+          <input type="checkbox"/>
+          <div class="mlist-head">
+            <h2>Blanca Nieves<a href="javascript:;" title="destacar" class="icon-detasq"></a></h2>
+            <time>10:47 am</time>
+          </div>
+          <p>Venta de Casa en Santiago de Surco</p>
+        </li>
+      </ul>
+      <div class="mlscroll"></div>
+    </div>
+  </div>
+  <div class="grids-8">
+    <p class="mail-home hide">Tiene 2 mensajes sin leer</p>
+    <div class="ctn-mail">
+      <div class="mail-head">
+        <div class="mail-title">
+          <h1>Venta de Casa en Santiago de Surco<span>&nbsp;(hace 1 día)</span></h1>
+          <address>Av. Benavides 4520 Dep 501A</address>
+        </div>
+        <div class="mail-opt"><a title="Destacar correo" href="javascript:;" class="icon-favorite"></a><a title="Imprimir" href="javascript:;" class="icon-impress"></a></div>
+      </div>
+      <div class="mail-el">
+        <div class="mlel-head">
+          <div class="mlel-title">
+            <h2>Blanca Nieves</h2>
+            <time>14 abr (hace 3 días)</time>
+          </div>
+          <p class="mlel-excerpt">Venta de Casa en Santiago de Surco</p>
+          <dl class="mlel-address">
+            <dt>De:</dt>
+            <dd>Luis Felipe Santisteban (lsantisteban@elcomercio.com.pe)	Tel: 987654321 / 987321645</dd>
+            <dt>Para:</dt>
+            <dd>Dennis Pozo</dd>
+          </dl>
+        </div>
+        <div class="mlel-msg">
+          <p>Inversiones y Construcciones El Derby S.A.C. le ayudará a vender su propiedad en el menor tiempo y al mejor precio. Tenemos una amplia cartera de clientes. Gerente General: Mariela Balbi. Código Agente Inmob: PN-3216. RUC: 20123456789.</p>
+        </div>
+      </div>
+      <div class="mail-el">
+        <div class="mlel-head">
+          <div class="mlel-title">
+            <h2>Blanca Nieves</h2>
+            <time>14 abr (hace 3 días)</time>
+          </div>
+          <p class="mlel-excerpt">Venta de Casa en Santiago de Surco</p>
+          <dl class="mlel-address">
+            <dt>De:</dt>
+            <dd>Luis Felipe Santisteban (lsantisteban@elcomercio.com.pe)	Tel: 987654321 / 987321645</dd>
+            <dt>Para:</dt>
+            <dd>Dennis Pozo</dd>
+          </dl>
+        </div>
+        <div class="mlel-msg">
+          <p>Inversiones y Construcciones El Derby S.A.C. le ayudará a vender su propiedad en el menor tiempo y al mejor precio. Tenemos una amplia cartera de clientes. Gerente General: Mariela Balbi. Código Agente Inmob: PN-3216. RUC: 20123456789.</p>
+        </div>
+      </div>
+      <div class="mail-el act">
+        <div class="mlel-head">
+          <div class="mlel-title">
+            <h2>Blanca Nieves</h2>
+            <time>14 abr (hace 3 días)</time>
+          </div>
+          <p class="mlel-excerpt">Venta de Casa en Santiago de Surco</p>
+          <dl class="mlel-address">
+            <dt>De:</dt>
+            <dd>Luis Felipe Santisteban (lsantisteban@elcomercio.com.pe)	Tel: 987654321 / 987321645</dd>
+            <dt>Para:</dt>
+            <dd>Dennis Pozo</dd>
+          </dl>
+        </div>
+        <div class="mlel-msg">
+          <p>Inversiones y Construcciones El Derby S.A.C. le ayudará a vender su propiedad en el menor tiempo y al mejor precio. Tenemos una amplia cartera de clientes. Gerente General: Mariela Balbi. Código Agente Inmob: PN-3216. RUC: 20123456789.</p>
+        </div>
+      </div>
+      <div class="mail-compose">
+        <form>
+          <p>Responder:</p>
+          <textarea id="txtCompose"></textarea>
+          <div class="controls">
+            <button class="btn-urb">Enviar</button>
+            <button class="btn-gray">Adjuntar Archivo</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

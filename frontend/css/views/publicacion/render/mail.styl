@@ -1,0 +1,279 @@
+/**
+* Urbania Mail Section
+* @class Urbania Mail
+* @module publication.css
+*/
+.mail-paginator
+	height 24px
+	a
+		background url(routImg+"icon-publicacion.png") icoNavMailRigth no-repeat
+		float left
+		height 24px
+		margin-left 6px
+		width 24px
+		&:first-child
+			margin 0
+		&.dis
+			cursor default
+		&:hover
+			opacity 0.85
+	.mail-previous
+		background-position icoNavMailLeft
+		&.dis
+			background-position icoNavMailLeftDis
+			&:hover
+				background-position icoNavMailLeftDis
+	.mail-next
+		&.dis
+			background-position icoNavMailRigthDis
+			&:hover
+				background-position icoNavMailRigthDis
+.ml-paginator
+	border 1px solid #E8E8E8
+	color #333
+	font-size 12px
+	line-height 14px
+	margin-bottom 8px
+	padding 8px 10px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+.mlp-pages
+	float left
+.mlp-navs
+	float right
+	a
+		background url(routImg+"icon-publicacion.png") iconMailLeft no-repeat
+		float left
+		height 14px
+		width 8px
+		&:hover
+			opacity 0.8
+		&.dis
+			cursor default
+	.mpnavs-left
+		margin-right 12px
+		&.dis
+			background-position iconMailLeftDis
+			&:hover
+				opacity 1
+	.mpnavs-rigth
+		background-position iconMailRigth
+		margin-left 12px
+		&.dis
+			background-position iconMailRigthDis
+			&:hover
+				opacity 1
+	span
+		float left
+.ml-list
+	float left
+	width 282px
+.mlist-el
+	border-color #E8E8E8
+	border-style solid
+	border-width 0 1px 1px 1px
+	cursor pointer
+	padding 11px 10px 11px 33px
+	position relative
+	&:first-child
+		border-top 1px solid #E8E8E8
+	&.act
+		background #FCF4DB
+	&.ml-read
+		background #F2F3F5
+	input[type="checkbox"]
+		left 10px
+		position absolute
+		top 13px
+	h2
+		color #333
+		float left
+		font-size 14px
+		min-height 18px
+		height auto !important
+		height 18px
+		line-height 14px
+		margin 0
+		padding 1px 0 0 22px
+		position relative
+		width 127px
+		word-wrap break-word
+	.icon-detasq
+		background url(routImg+"icon-publicacion.png") iconDestaque no-repeat
+		height 19px
+		left 0
+		position absolute
+		top 0
+		width 16px
+		&.act
+			background-position iconDestaqueAct
+		&:hover
+			opacity 0.75
+	time
+		color #999
+		float right
+		font-size 12px
+		padding-top 3px
+		text-align right
+		width 88px
+	p
+		margin 0
+	.mlist-attach
+		min-height 16px
+		height auto !important
+		height 16px
+		line-height 13px
+		margin-top 5px
+		padding 4px 0 0 28px
+		position relative
+		word-wrap break-word
+		span
+			background url(routImg+"icon-publicacion.png") iconAttach no-repeat
+			height 20px
+			left 0
+			position absolute
+			top 0
+			width 20px
+	.mlist-head
+		margin-bottom 4px
+		*zoom 1
+		&:before,&:after
+			display table
+			content ""
+			line-height 0
+		&:after
+			clear both
+.mail-home
+	color #666
+	font-size 16px
+	line-height 17px
+	margin 0
+	padding-top 32px
+	text-align center
+.ctn-mail
+	background #F2F3F5
+	border 1px solid #E8E8E8
+.mail-head
+	background #FFF
+	padding 12px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.mail-title
+		float left
+		width 536px
+		h1
+			color #333
+			font-size 20px
+			font-weight 400
+			margin-bottom 4px
+			span
+				color #CC0000
+				font-size 14px
+		address
+			color #666
+			font-size 12px
+			font-style normal
+	.mail-opt
+		float right
+		padding-top 3px
+		width 43px
+		a
+			background url(routImg+"icon-publicacion.png") iconFavorite no-repeat
+			float left
+			height 21px
+			margin-left 5px
+			&:first-child
+				margin 0
+		.icon-favorite
+			width 22px
+		.icon-impress
+			background-position iconImpress
+			width 16px
+.mail-el
+	border-top 1px solid #CCC
+	padding 12px
+	&.act
+		background #FFF
+		.mlel-excerpt
+			display none
+		.mlel-address
+			display block
+		.mlel-msg
+			display block
+	.mlel-head
+		cursor pointer
+		p
+			margin 0
+	.mlel-title
+		padding-bottom 10px
+		*zoom 1
+		&:before,&:after
+			display table
+			content ""
+			line-height 0
+		&:after
+			clear both
+		h2
+			color #666
+			float left
+			font-size 14px
+			font-weight 700
+			margin 0
+			width 432px
+			word-wrap break-word
+		time
+			color #999
+			float right
+			font-size 12px
+			padding-top 2px
+			text-align right
+			width 148px
+	.mlel-excerpt
+		color #666
+		font-size 12px
+	.mlel-address
+		color #333
+		display none
+		font-size 12px
+		margin 0
+		padding-top 2px
+		dt
+			float left
+			width 44px
+		dd
+			margin-left 44px
+			padding-bottom 8px
+	.mlel-msg
+		border-top 1px solid #CCC
+		display none
+		margin-top 10px
+		padding 18px 5px 0
+		p
+			color #333
+			font-size 12px
+			line-height 16px
+			margin 0
+			word-wrap break-word
+.mail-compose
+	background #FFF
+	padding 20px 12px
+	p
+		color #333
+		font-size 12px
+		margin-bottom 5px
+	textarea
+		box-shadow none
+		height 86px
+		width 576px
+	.controls
+		padding-top 16px

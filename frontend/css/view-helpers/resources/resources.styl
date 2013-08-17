@@ -1,0 +1,748 @@
+/**
+* Resources Section
+* @class Resources
+* @module base.css
+*/
+
+/**
+@module resources.css
+@submodule Style Libre: Van los estilos libres
+*/
+.fix-bg
+	position relative
+	z-index 2
+.infprint
+	display block
+	li
+		color #CC0000
+.infview
+	display inline-block
+	*display inline
+	line-height 15px
+	padding-left 28px
+	position relative
+	vertical-align top
+	*zoom 1
+	span
+		background url(routImg+"icon-portada.png") IconInfview
+		height 14px
+		left 0
+		position absolute
+		top 0
+		width 22px
+.btn-vermas
+	background #F2F3F5
+	border 1px solid #E8E8E8
+	color #5F8526
+	display block
+	font-weight 700
+	line-height 40px
+	outline: 0 none !important
+	text-align center
+	&:hover
+		background #d7d6d6
+		color #5F8526
+		text-decoration none
+	&.loading
+		background url(routImg+"loading.gif") center center no-repeat #e8e8e8
+		text-indent -9999px
+.box-white
+	background #fff
+	border 1px solid #E8E8E8
+	margin 0 0 35px
+	padding 20px 10px 30px
+	&.no-padding
+		padding 10px 0 20px
+	p
+		font-size 14px
+		margin-bottom 20px
+	h4
+		color #333
+		font 18px/20px family1
+		margin-bottom 20px
+.help-obl
+	color #CC0000
+.control
+	text-align center
+.rcv-alert
+	background-color #F2F3F5
+	border 1px solid #E8E8E8
+	color #333
+	font-size 12px
+	line-height 14px
+	margin-top 10px
+	padding 12px 0 12px 10px
+	.ioption
+		font-size 12px
+		line-height 16px
+		input[type="checkbox"]
+			top 1px
+			*top -1px
+.textgray
+	color #999
+	font-size 12px
+	line-height 11px
+.hide
+	display none
+.box-lesswhite
+	background #FAFBFE
+	border 1px solid #E8E8E8
+	margin-bottom 30px
+	padding 10px
+/**
+@module resources.css
+@submodule Opciones del admin : Contenedor de la opciones que van debajo del titulo
+*/
+.opts-hadmin
+	padding-bottom 12px
+	p
+		color #666
+		float left
+		margin 0
+		padding-top 7px
+	.box-left
+		float left
+		.btn-urb,.btn-gray
+			float left
+		.box-ck, .select-line
+			float left
+		.btn-gray + .btn-gray
+			margin 0 0 0 10px
+	.box-rigth
+		float right
+	.select-line
+		float right
+		margin-right 10px
+		label
+			color #999
+			font-size 13px
+		.sel-xsmall
+			font-size 14px
+			height 25px
+			line-height 25px
+			margin-left 5px
+			padding 2px 5px
+	.btn-urb,.btn-gray
+		float right
+	.btn-urb + .btn-gray
+		margin-right 10px
+	.btn-gray + .btn-gray
+		margin-right 10px
+/**
+@module resources.css
+@submodule Urbania Simple Title: Titulos de Urbania con globos al lado izquierdo
+*/
+.urb-stitle
+	border-bottom 1px solid #CCC
+	font-size 20px
+	line-height 24px
+	margin 0 0 12px
+	padding-bottom 3px
+	&.font28
+		font-size 28px
+		line-height 30px
+		padding-bottom 7px
+.subtit
+	font-size 19px
+	line-height 19px
+/**
+@module resources.css
+@submodule Urbania Title: Titulos de Urbania con globos al lado izquierdo
+*/
+.urb-title
+	border-bottom 1px solid #CCC
+	font-size 20px
+	line-height 24px
+	padding-bottom 4px
+	position relative
+	span
+		background-image url(routImg+"icon-layout.png")
+		background-repeat no-repeat
+		height 23px
+		left -24px
+		position absolute
+		top 0
+		width 16px
+		&.bg-fb
+			background-position homeIconFb
+		&.bg-tw
+			background-position homeIconTw
+/**
+@module resources.css
+@submodule Header admin: Contenedor de los titulos en el administrador
+*/
+.head-adm
+	border-bottom 1px solid #ccc
+	margin 0 0 15px
+	padding-bottom 10px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	h2
+		font 20px/22px family2
+.lnk-return
+	top 8px
+	position absolute
+	right 0
+	z-index 1
+.post-relt
+	position relative
+/**
+@module resources.css
+@submodule Formulario Filtro Administrador
+*/
+.calend
+	position relative
+	input[type="text"]
+		font-family family1
+		padding-left 35px
+		width 168px
+	.vcalendar
+		background url(routImg+"icon-publicacion.png") actionIconCalendar no-repeat
+		height 21px
+		left 10px
+		position absolute
+		top 5px
+		width 19px
+.just-search
+	margin-bottom 10px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.controls
+		float left
+		position relative
+		& + .controls
+			padding-left 10px
+	input[type="text"]
+		font-family family1
+		font-size 14px
+		height 20px
+		line-height 20px
+		padding-left 5px
+		width 420px
+.filter-adm
+	background #F2F3F5
+	border-radius 7px
+	padding 10px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.controls
+		float left
+		position relative
+		& + .controls
+			padding-left 10px
+	input[type="text"]
+		font-family family1
+		font-size 14px
+		height 20px
+		line-height 20px
+		padding-left 30px
+		width 720px
+	.vglass
+		background url(routImg+"icon-layout.png") IconVglass no-repeat
+		height 20px
+		left 5px
+		position absolute
+		top 5px
+		width 21px
+	.btn-urb
+		font-size 17px
+		height 30px
+		line-height 22px
+		width 150px
+/**
+@module resources.css
+@submodule Buscador para Portadas
+*/
+.hfilter-adm
+	background #6C8764
+	border-radius 10px
+	margin-bottom 40px
+	padding 20px 30px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	input[type="text"]
+		font-family family1
+		font-size 14px
+		height 20px
+		line-height 20px
+		padding-left 30px
+		width 620px
+	select
+		background #FFF
+		height 33px
+		padding 6px
+		width 160px
+	.vglass
+		background url(routImg+"icon-layout.png") IconVglass no-repeat
+		height 20px
+		left 5px
+		position absolute
+		top 5px
+		width 21px
+.search-data
+	float left
+	margin-right 25px
+	width 660px
+	.cgroup-inline
+		margin 15px 0 0
+		.controls
+			float left
+	.controls
+		position relative
+.selectbox
+	float left
+	margin-left 20px
+	input[type="text"]
+		font-family family1
+		font-size 14px
+		height 20px
+		line-height 20px
+		padding-left 10px
+		width 140px
+		&.input-district
+			padding-left 30px
+			width 260px
+	.varrow
+		background url(routImg+"icon-layout.png") IconVarrow no-repeat
+		height 20px
+		right 9px
+		position absolute
+		top 5px
+		width 14px
+	&:first-child
+		margin-left 0
+/**
+@module resources.css
+@submodule Order table: Flechas de ordenamiento para los menus
+*/
+.tbl-order
+	display inline-block
+	*display inline
+	height 20px
+	padding 10px 0 0 5px
+	vertical-align middle
+	*zoom 1
+	a
+		background-image url(routImg+"icon-layout.png")
+		display inline-block
+		*display inline
+		height 10px
+		margin-left 2px
+		vertical-align top
+		width 12px
+		*zoom 1
+		&:first-child
+			margin 0
+	.up
+		background-position -432px -110px
+		&:hover
+			background-position -408px -110px
+		&.act
+			background-position -420px -110px
+			cursor default
+	.down
+		background-position -432px -100px
+		&:hover
+			background-position -408px -100px
+		&.act
+			background-position -420px -100px
+			cursor default
+/**
+@module resources.css
+@submodule List checks: Utilitario que sirve para hacer un listado de checks de 5 columnas
+*/
+.list-chk
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	li
+		float left
+		width 182px
+		&:nth-child(n+6)
+			margin-top 10px
+	input[type="radio"],input[type="checkbox"]
+		*top 0
+	&.lchk-4
+		li
+			width 228px
+			&:nth-child(n+5)
+				margin-top 10px
+/**
+@module resources.css
+@submodule Estados de pago
+*/
+.stpaid-ped
+	color #CC0000
+.stpaid-act
+	color #5F8526
+.bg-stpaidAct
+	td
+		background #FCF4DB
+.bg-stpaidOver
+	td
+		background #F2F3F5
+		color #666
+.expire
+	font-size 9px
+	line-height 9px
+/**
+@module resources.css
+@submodule Iconos de action para el admin
+*/
+.action-icons
+	*display inline
+	*zoom 1
+	background-image url(routImg+"icon-publicacion.png")
+	background-repeat no-repeat
+	display inline-block
+	font-size 0px
+	height 21px
+	line-height 0px
+	vertical-align middle
+	width 20px
+	& + .action-icons
+		margin-left 10px
+	&.edit
+		background-position actionIconEdit
+		height 21px
+		width 18px
+		&:hover
+			background-position actionIconEditHover
+	&.highlight
+		background-position actionIconHighlight
+		width 18px
+		&:hover
+			background-position actionIconHighlightHover
+		&.act
+			background-position actionIconNoHighlight
+			&:hover
+				background-position actionIconNoHighlightHover
+			&.bloq
+				background-position actionIconNoHighlightDis
+				&:hover
+					background-position actionIconNoHighlightDis
+		&.bloq
+			background-position actionIconHighlightDis
+			&:hover
+				background-position actionIconHighlightDis
+	&.givedown
+		background-position actionIconGivedown
+		width 18px
+		&:hover
+			background-position actionIconGivedownHover
+	&.republish
+		background-position actionIconRepublish
+		&:hover
+			background-position actionIconRepublishHover
+	&.delete
+		background-position actionIconDelete
+		&:hover
+			background-position actionIconDeleteHover
+	&.note
+		background-position actionIconNote
+		&:hover
+			background-position actionIconNoteHover
+	&.message
+		background-position actionIconMessage
+		&:hover
+			background-position actionIconMessageHover
+	&.share
+		background-position actionIconShare
+		&:hover
+			background-position actionIconShareHover
+	&.calendar
+		background-position actionIconCalendar
+		width 19px
+		&:hover
+			background-position actionIconCalendarHover
+	&.properties
+		background-position actionIconProperty
+		&:hover
+			background-position actionIconPropertyHover
+	&.play
+		background-position actionIconPlay
+		&:hover
+			background-position actionIconPlayHover
+	&.pending
+		background-position actionIconPending
+		&:hover
+			background-position actionIconPendingHover
+	&.addprinted
+		background-position actionIconAddPrinted
+		&:hover
+			background-position actionIconAddPrintedHover
+	&.cancelprinted
+		background-position actionIconCancelPrinted
+		&:hover
+			background-position actionIconCancelPrintedHover
+.box-highlight
+	background #FFFBA8
+	margin-top 10px
+	padding 5px 10px
+	.text
+		display inline-block
+		margin-left 10px
+	.highlight:hover
+		background-position actionIconHighlight
+.blog-img
+	text-align center
+	img
+		height 169px
+.blog-imgch
+	text-align center
+	img
+		height 82px
+.bline
+	border-bottom 1px solid #ccc
+	color #000
+	font-size 17px
+	line-height 17px
+	padding-bottom 6px
+/**
+@module resources.css
+@submodule Size Varied: estilos como paddings, margins,anchos que se usan en ocaciones en la web
+*/
+.pb50
+	padding-bottom 50px
+.mb30
+	margin-bottom 30px
+.mb20
+	margin-bottom 20px
+.mb15
+	margin-bottom 15px
+.mb10
+	margin-bottom 10px
+.mb40
+	margin-bottom 40px
+.mt30
+	margin-top 30px
+.mt32
+	margin-top 32px
+.mt50
+	margin-top 50px
+.ml10
+	margin-left 10px
+.w322
+	width 322px
+.green
+	color #5F8526
+/**
+@module resources.css
+@submodule Position styles: estilos de posicionamiento como floats, text-aligns
+*/
+.ftleft
+	float left
+.ftright
+	float right
+/**
+* Popups Section
+* @class Popups
+* @module portada.css
+*/
+.popup-addfavorite
+	background #fff
+	padding 20px
+	width 250px
+	p
+		color #333
+		line-height 15px
+	textarea
+		margin-bottom 15px
+		width 230px
+.popup-box
+	background #fff
+	width 460px
+.report-adv
+	p
+		color #333
+		font-size 14px
+		line-height 15px
+		padding-top 10px
+	.controls
+		margin-bottom 10px
+	.control-label
+		line-height 25px
+		padding-top 15px
+.reason-message
+	border-bottom 1px solid #ccc
+	margin-bottom 20px
+	padding-bottom 10px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+.reason-img
+	float left
+	width 145px
+.reason-tit
+	float left
+	margin-left 10px
+	width 280px
+	h2
+		color #5F8727
+		font 700 14px/15px family1
+	p
+		color #000
+		font-weight 700
+		margin-bottom 0
+	span
+		color #CC0000
+.formMessage
+	p
+		color #666
+	.control-label
+		display inline-block
+		line-height 25px
+		margin-bottom 0
+		vertical-align top
+		width 140px
+		*display inline
+		*zoom 1
+	.controls
+		display inline-block
+		vertical-align top
+		width 310px
+		*display inline
+		*zoom 1
+	input
+		width 293px
+	textarea
+		margin-bottom 15px
+		width 293px
+.terms
+	background #F2F3F5
+	color #666
+	margin-bottom 0
+	padding 12px 0
+	text-align center
+/**
+* Alerts
+* @class Popups
+* @module layout.css
+*/
+.box-alert
+	background-color #FFEFB7
+	border 1px solid #FFB70F
+	border-radius 4px
+	color #333
+	font-size 13px
+	line-height 16px
+	margin 20px auto 0
+	padding 8px 0
+	text-align center
+	width 938px
+	&.error
+		background-color #f2dede
+		border 1px solid #eed3d7
+	a
+		color #d19301
+		float right
+		font 700 14px/15px family1
+		margin-right 15px
+		text-decoration none
+		&.close
+			color #ca4659
+/**
+* Blog Urbania
+* @class Blog Urbania
+* @module layout.css
+*/
+.txtgray
+	color #666
+	font-family family2
+	font-size 15px
+	line-height 16px
+.box-perfil
+	background #fff
+	border 1px solid #ececec
+.border-gray
+	.grids-4
+		background #fff
+		border 1px solid #ececec
+		width 298px
+.blog-box
+	margin-top 30px
+	.urb-title
+		position relative
+		*zoom 1
+		&:before,&:after
+			display table
+			content ""
+			line-height 0
+		&:after
+			clear both
+		span
+			background-image url(routImg+"icon-layout.png")
+			background-repeat no-repeat
+			height 23px
+			left -24px
+			position absolute
+			top 0
+			width 16px
+		.textgray
+			color #666
+			float left
+			font-family family2
+			font-size 15px
+			line-height 16px
+			margin-left 5px
+			padding-top 5px
+.blog-content
+	padding 15px
+	h2
+		color #5F8626
+		font 20px/21px family1
+		margin-bottom 3px
+	p
+		font-size 12px
+		line-height 15px
+		margin-bottom 15px
+		&:last-of-type
+			margin-bottom 4px
+.hgt-blog
+	height 320px
+.full-text
+	h2
+		color #000
+		font 700 14px/16px family1
+		margin-bottom 10px
+		padding-top 10px
+	p
+		font-size 12px
+		line-height 16px
+		margin-bottom 0
+		padding-bottom 10px
+	ul
+		margin-left 15px
+		padding-bottom 10px
+		li
+			line-height 16px
+			list-style-type disc
+			padding-bottom 5px

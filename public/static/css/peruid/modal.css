@@ -1,0 +1,9 @@
+div#peruid_modal { position:absolute; top:0; left:0; z-index:99999;}
+
+div#peruid_modal .pid_frame { position:fixed; margin:0 auto;  background:#fff url(/f/i/wait2.gif) center center no-repeat; border-radius:5px; border:8px solid #999; behavior: url(/f/css/PIE.htc); }
+
+div#peruid_modal .pid_back  { background-color:#000; opacity:0.8; position:absolute; top:0; left:0 }
+div#peruid_modal .pid_close {position:absolute; background:url(../i/btn-cerrar.png?201209) 0 0 no-repeat; top:4px; right:4px; width:19px; height:19px; text-indent:-9999px; outline:none; z-index:9999;  }
+/*ie6*/
+div#peruid_modal .pid_frame{_width:400px; _position:absolute; _height:auto; _border-radius:5px; }
+div#peruid_modal .pid_close {_background:url(/f/i/btn-cerrar.gif) 0 0 no-repeat; }

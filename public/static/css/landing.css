@@ -1,0 +1,9 @@
+@font-face{font-family:"helveticaCond";font-style:normal;font-weight:normal;src:url("fonts/helveticaCond/helveticaCond-webfont.eot");src:url("fonts/helveticaCond/helveticaCond-webfont.eot?#iefix") format('embedded-opentype'),url("fonts/helveticaCond/helveticaCond-webfont.woff") format('woff'),url("fonts/helveticaCond/helveticaCond-webfont.ttf") format('truetype'),url("fonts/helveticaCond/helveticaCond-webfont.svg#helveticaCond") format('svg')}
+.arr-left{background:url("../img/icon-set3.png") -247px -223px no-repeat;height:138px;left:0;position:absolute;top:95px;width:85px;z-index:2}
+.arr-right{background:url("../img/icon-set3.png") -333px -224px no-repeat;height:140px;position:absolute;right:0;top:130px;width:76px;z-index:2}
+.img-estate-agent{background:url("../img/icon-set3.png") -320px 0 no-repeat;height:222px;margin:0 auto;width:216px}
+.img-building{background:url("../img/icon-set3.png") 0 -200px no-repeat;height:180px;margin:10px auto 0;width:246px}
+.box-oportunity{margin:20px 0 0 40px;position:relative;width:410px;float:left;}
+.box-oportunity h2{color:#333;font:700 31px/32px 'helveticaCond',Arial,sans-serif;margin:25px 0;text-align:center}
+.box-oportunity p{color:#333;font-size:14px;line-height:18px;margin-bottom:20px}
+.box-oportunity.only{display:block;margin:30px 0 0 210px}

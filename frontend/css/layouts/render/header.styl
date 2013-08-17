@@ -1,0 +1,408 @@
+/**
+* Header Section
+* @class Header
+* @module base.css
+*/
+.top-gec
+	background url(routImg+"bg-topgec.gif") repeat-x
+	font-family Arial,sans-serif
+	height 27px
+	min-width 980px
+	padding-top 2px
+	position relative
+	z-index 10
+	.logo-gec
+		background url(routImg+"icon-layout.png") headLogoGec no-repeat
+		float left
+		height 19px
+		width 115px
+	h4
+		color #FFF
+		float left
+		font 11px/15px family3
+		margin 0
+		padding 2px 0 0 8px
+	.cont-clasif
+		background #FFF
+		border-color #CCC
+		border-radius 7px 7px 0 0
+		border-style solid
+		border-width 1px 1px 0
+		float right
+		height 22px
+		line-height 15px
+		padding 4px 0 0 10px
+		width 180px
+		> li
+			height 22px
+			position relative
+		> li:hover
+			.clasif-link
+				background url(routImg+"icon-layout.png") headClasifLink no-repeat
+				opacity 0.75
+			ul
+				display block
+	.clasif-list
+		display none
+		background #FFF
+		border-color #CCC
+		border-radius 0 0 7px 7px
+		border-style solid
+		border-width 0 1px 1px
+		box-shadow 1px 1px 2px 0 #454545
+		font-size 12px
+		position absolute
+		right -1px
+		top 21px
+		width 190px
+		p
+			font-size 12px
+			margin 0
+		a
+			color #015CAD
+			font-size 11px
+		li
+			border-top 1px solid #E4E4E4
+			height 37px
+			padding 3px 10px 0
+			&:first-child
+				border-color #FFF
+			&:hover
+				background #F3F3F3
+	.clasif-part
+		background url(routImg+"icon-layout.png") headClasifPart no-repeat
+		display inline-block
+		*display inline
+		font-size 12px
+		vertical-align top
+		padding-right 16px
+		*zoom 1
+	.clasif-link
+		background url(routImg+"icon-layout.png") headClasifLink2 no-repeat
+		color #000
+		display inline-block
+		*display inline
+		font-size 12px
+		font-weight 700
+		margin-left 5px
+		padding-right 14px
+		text-decoration none
+		vertical-align top
+		*zoom 1
+.cont-menu
+	border-top 1px solid #CCC
+	margin 0 auto
+	padding 0 10px
+	position relative
+	width 940px
+header
+	background #FFF
+	border-bottom 1px solid #E0E0E0
+	.box-center
+		padding 10px 0 12px
+/**
+@module header.css
+@submodule Top Header
+*/
+.head-logo
+	float left
+	height 50px
+	margin 0
+	width 160px
+	a
+		background url(routImg+"icon-layout.png") headHeadLogo no-repeat
+		display block
+		font-size 0
+		height 50px
+		width 160px
+		*text-indent -9999px
+.nav-geo
+	border-color #FFF
+	border-radius 6px 6px 0 0
+	border-style solid
+	border-width 1px 1px 0 1px
+	color #666
+	float left
+	font 13px/15px family1
+	margin 10px 0 0 24px
+	padding 8px 4px 0
+	position relative
+	width 130px
+	&.act
+		border-color #E0E0E0
+		.geo-depart
+			border-bottom 1px solid #E0E0E0
+			padding-bottom 4px
+		.geo-ic
+			display none
+		.geo-list
+			display block
+	.geo-depart
+		display block
+		padding 0 4px
+	.geo-ic
+		background url(routImg+"icon-layout.png") headIconGeo no-repeat
+		height 7px
+		position absolute
+		right 4px
+		top 12px
+		width 12px
+.geo-list
+	background #FFF
+	border-color #E0E0E0
+	border-radius 0 0 6px 6px
+	border-style solid
+	border-width 0 1px 1px 1px
+	display none
+	left -1px
+	//overflow-y scroll
+	padding 6px 4px 4px
+	position absolute
+	top 100%
+	width 130px
+	z-index 10
+	ul
+		overflow-y scroll
+		position relative
+		height 138px
+	a
+		color #666
+		display block
+		font-size 13px
+		padding 4px
+		&:hover
+			background #FFF1B9
+			text-decoration none
+#frm_top_search
+	float left
+	margin 12px 0 0 38px
+	.controls + .controls
+		margin-left 10px
+	.btn-urb
+		font-size 12px
+		height 24px
+		padding 4px 10px
+	input[type="text"]
+		box-shadow none
+		font-size 11px
+		height 14px
+		line-height 16px
+		width 262px
+.head-info
+	float right
+	padding-top 6px
+	text-align right
+	width 210px
+	p
+		color #666
+		font 11px/13px family1
+		margin 0
+.head-social
+	margin-bottom 8px
+	a
+		background url(routImg+"icon-layout.png") headIconSocialFb no-repeat
+		float right
+		width 18px
+		height 18px
+		margin-right 10px
+		margin-top 0
+		transition margin 0.1s ease-out
+		&:first-child
+			margin 0
+		&:hover
+			background-position headIconSocialFbHover
+			margin-top -3px
+	.twt
+		background-position headIconSocialTwt
+		&:hover
+			background-position headIconSocialTwtHover
+	.glg
+		background-position headIconSocialGlg
+		&:hover
+			background-position headIconSocialGlgHover
+/**
+@module header.css
+@submodule Menu principal Header
+*/
+#main-menu
+	float left
+	width 100%
+	& > li
+		float left
+		padding 6px 0
+		position relative
+		z-index 1
+		&:first-child
+			a
+				border none
+		a
+			&.active
+				color #000
+		> a
+			border-left 1px solid #608828
+			color #5F8526
+			display block
+			font-size 13px
+			height 24px
+			line-height 24px
+			padding 0 8px
+			&:hover
+				color #000
+				text-decoration none
+		span
+			background url(routImg+"icon-layout.png") headIconMainmenu no-repeat
+			display inline-block
+			*display inline
+			height 5px
+			margin 10px 0 0 4px
+			vertical-align top
+			width 10px
+			*zoom 1	
+			&.name
+				color #648E1A
+				background none
+				margin 0
+	.subnav
+		&:hover
+			background #FFF
+			border-color #E0E0E0
+			border-radius 6px 6px 0 0
+			border-style solid
+			border-width 1px 1px 0 1px
+			color #000
+			margin -7px -1px 0 0
+			padding-top 12px
+			z-index 2
+			a
+				border none
+				color #5F8526
+			ul
+				display block				
+	.nav-session
+		border-right 1px solid #FFF
+		float right
+		padding-left 10px
+		padding-right 10px
+		width 100px		
+		&.act
+			background #fafbfe
+			border-left 1px solid #e0e0e0
+			border-right 1px solid #e0e0e0
+			height 25px
+			position absolute
+			right 10px
+			ul
+				margin-top -1px
+		.active
+			border-right 1px solid #e0e0e0
+		&:hover
+			margin-right 0
+		p
+			margin 0
+		.account
+			font-size 10px
+			margin-bottom 2px
+			&.top
+				padding-top 6px
+		span
+			background-position headIconMainmenuAcount
+			margin 4px 0 0 30px
+		ul
+			a:hover, .active
+				color #000
+				background #FFF1B9
+	ul
+		background #FFF
+		border-color #E0E0E0
+		border-radius 0 0 6px 6px
+		border-style solid
+		border-width 0 1px 1px 1px
+		display none
+		left -1px
+		position absolute
+		top 100%
+		width 100%
+		li
+			border-top 1px solid #E0E0E0
+			&:last-child a
+				border-radius 0 0 6px 6px
+			a
+				&.active
+					background #FFF1B9
+		a
+			display block
+			font-size 11px
+			line-height 13px
+			padding 6px 5px
+			text-decoration none
+			transition background 0.2s ease-in 0s
+			&:hover
+				background #FFF1B9
+#ctn-smenu
+	background #fafbfe
+	background unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZmJmZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmUzZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)")
+	background -moz-linear-gradient(top,  #fafbfe 0%, #e2e3e5 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafbfe), color-stop(100%,#e2e3e5))
+	background -webkit-linear-gradient(top,  #fafbfe 0%,#e2e3e5 100%)
+	background -o-linear-gradient(top,  #fafbfe 0%,#e2e3e5 100%)
+	background -ms-linear-gradient(top,  #fafbfe 0%,#e2e3e5 100%)
+	background linear-gradient(to bottom,  #fafbfe 0%,#e2e3e5 100%)
+	border-top 1px solid #E0E0E0
+	.box-center
+		padding 0
+		position relative	
+	.btn-urb
+		color #fff
+		height 26px
+		line-height 26px
+		padding 0 30px
+		position absolute
+		right 0
+		top 7px
+		z-index 1
+.sec-menu
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	li
+		float left
+	a
+		color #666
+		display block
+		font-size 12px
+		height 40px
+		line-height 40px
+		padding 0 12px
+		transition background 0.2s ease-out 0s
+		&:hover, &.active
+			background #FFF
+			color #000
+			text-decoration none
+		&.highlight
+			color #CC0000
+		&.dis
+			color #A8A8A8
+			&:hover
+				background none
+				cursor default
+#sec-submenu
+	background #fff
+	box-shadow 0 2px 3px #ccc
+	.box-center
+		padding 0
+	li
+		float left
+	a
+		color #5F8626
+		display block
+		font-size 12px
+		height 30px
+		line-height 30px
+		padding 0 12px
+		&:hover, &.active
+			color #000
+			text-decoration none
