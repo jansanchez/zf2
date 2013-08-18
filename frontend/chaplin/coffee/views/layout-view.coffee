@@ -22,3 +22,4 @@ define [
         if txtSearch!=''
           url = window.location.protocol + '//' + window.location.host + window.location.pathname + '#search/'+txtSearch
           window.location = url
+          # {keyword: txtSearch}
