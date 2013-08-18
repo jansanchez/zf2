@@ -13,6 +13,8 @@ define(['controllers/base/controller'], function(Controller) {
       return _ref;
     }
 
+    IndexController.prototype.selectorTitle = '.head-adm h2';
+
     IndexController.prototype.index = function(params) {
       return console.log('index!');
     };
@@ -22,7 +24,7 @@ define(['controllers/base/controller'], function(Controller) {
     };
 
     IndexController.prototype.search = function(params) {
-      return console.log('Soy "indexController" invocaste mi route "search" y me pasaron el parametro: ' + params.keyword);
+      return $(this.selectorTitle).html('Mensajes - Buscando: ' + params.keyword);
     };
 
     return IndexController;

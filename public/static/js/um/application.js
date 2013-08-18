@@ -19,9 +19,3 @@ define(['chaplin'], function(Chaplin) {
 
   })(Chaplin.Application);
 });
-
-({
-  initMediator: function() {
-    return Chaplin.mediator.user = null;
-  }
-});
