@@ -3,16 +3,25 @@ var __slice = [].slice;
 
 define(['handlebars', 'chaplin', 'lib/utils'], function(Handlebars, Chaplin, utils) {
   'use strict';
-  Handlebars.registerHelper('pageState', function(page, total) {
-    return page++;
-  });
-  Handlebars.registerHelper('pageNext', function(page, total) {
-    return page++;
+  Handlebars.registerHelper('urlPage', function(routeName, page, crit) {
+    if (crit === "previous") {
+      page--;
+    } else {
+      page++;
+    }
+    return Chaplin.helpers.reverse(routeName, [page]);
   });
   Handlebars.registerHelper('url', function() {
     var options, params, routeName, _i;
     routeName = arguments[0], params = 3 <= arguments.length ? __slice.call(arguments, 1, _i = arguments.length - 1) : (_i = 1, []), options = arguments[_i++];
     return Chaplin.helpers.reverse(routeName, params);
   });
-  return null;
+  return Handlebars.registerHelper('debug', function(optionalValue) {
+    console.log("Contexto actual::");
+    console.info("this");
+    if (optionalValue) {
+      console.log("Value::");
+      return console.info(optionalValue);
+    }
+  });
 });

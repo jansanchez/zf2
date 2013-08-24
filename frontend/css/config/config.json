@@ -3,7 +3,7 @@
 		"ext":".styl",
 		"cmd":"stylus -c",
 		"cmdr":"-o",
-		"route":"../../src/public/static/css"
+		"route":"../../public/static/css"
 	},
 	"layouts":{
 		"active":true,
@@ -241,18 +241,26 @@
 		"iconMailLeft":"-212px -86px",
 		"iconMailRigth":"-220px -86px",
 		"iconMailLeftDis":"-198px -86px",
-		"iconMailRigthDis":"-205px -86px",
+		"iconMailRigthDis":"-204px -86px",
+		"iconRefresh":"-207px -107px",
+		"iconNoread":"-222px -107px",
+		"iconRead":"-240px -107px",
+		"iconRemoveBtn":"-290px -107px",
+		"iconRemove":"-304px -107px",
+		"iconRemoveHover":"-318px -107px",
 		"iconDestaque":"-228px -86px",
 		"iconDestaqueAct":"-244px -86px",
-		"iconAttach":"-260px -86px",
-		"iconImpress":"-280px -86px",
-		"iconFavorite":"-296px -86px",
+		"iconDestaqueHover":"-260px -86px",
+		"iconAttach":"-276px -86px",
+		"iconImpress":"-258px -107px",
+		"iconImpressHover":"-274px -107px",
 		"iconDropDown":"-198px -100px",
 		"iconFilter":"-318px -86px",
 		"icoNavMailRigth":"-404px -86px",
 		"icoNavMailLeft":"-380px -86px",
 		"icoNavMailRigthDis":"-356px -86px",
-		"icoNavMailLeftDis":"-332px -86px"
+		"icoNavMailLeftDis":"-332px -86px",
+		"houseIconSuscribir":"-180px -285px"
 	},
 	"ignore":{
 		"layouts":["render"],

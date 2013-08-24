@@ -15,6 +15,11 @@ define(['chaplin'], function(Chaplin) {
 
     Application.prototype.title = 'Urbania Mail';
 
+    Application.prototype.initMediator = function() {
+      Chaplin.mediator.pages = Urbmail.totalmsg;
+      return Application.__super__.initMediator.apply(this, arguments);
+    };
+
     return Application;
 
   })(Chaplin.Application);

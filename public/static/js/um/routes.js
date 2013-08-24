@@ -3,7 +3,27 @@ define(function() {
   'use strict';
   return function(match) {
     match('', 'index#index');
-    match('message', 'index#message');
-    return match('search/:keyword', 'index#search');
+    match('message/:id', 'index#message', {
+      constraints: {
+        id: /^[0-9]*$/
+      }
+    });
+    match('p:page', 'index#show', {
+      constraints: {
+        page: /^[0-9]*$/
+      }
+    });
+    match('p:page/message/:id', 'index#show', {
+      constraints: {
+        page: /^[0-9]*$/
+      },
+      name: "message"
+    });
+    return match('p:page/search/:search', 'index#show', {
+      constraints: {
+        page: /^[0-9]*$/
+      },
+      name: "search"
+    });
   };
 });

@@ -341,6 +341,15 @@
 		width 180px
 	.control
 		margin-top 5px
+.urbhouse-icon
+	background url(routImg+"icon-portada.png") houseIconSuscribir no-repeat #ECECFB
+	border 3px solid #fff
+	border-radius 4px
+	box-shadow 0 1px 2px #333
+	height 42px
+	margin 12px auto 0
+	padding 1px
+	width 46px
 .box-suscribe
 	padding-top 39px
 	position relative
@@ -355,19 +364,22 @@
 	height 127px
 	position relative
 	.back
-		transform rotateY(180deg)
-		overflow hidden
-		background #75A732;
-		text-align center
-		box-shadow inset 0px 0px 20px rgba(25, 94, 3, .75)
+		background #fff
 		border-radius 10px
+		border 1px solid #d3d5d5
+		box-shadow inset 0px 0px 20px #ccc
+		overflow hidden
+		text-align center
+		transform rotateY(180deg)
 		p
-			margin-top 27px
-			font-size 19px
-			color #ffffff
+			color #59595F
+			font 12px/13px family3
+			margin 10px 0 0
+			text-align center
 		span
-			display block
-			line-height 22px
+			color #74A632
+			font-size 14px
+			font-weight 700
 .front, .back
 	position absolute
 	backface-visibility hidden
@@ -1278,7 +1290,7 @@ textarea
 		float left
 		padding 5px 0
 	dd
-		margin-left 100px
+		margin-left 90px
 		padding 5px 0
 .map-places
 	padding-bottom 10px
@@ -1476,11 +1488,17 @@ textarea
 		float left
 		font 400 12px/14px family1
 		margin 10px 0 0
+		text-transform uppercase
 		width 95px
 		word-wrap break-word
 	.for-rating
 		float left
 		margin 15px 0
+	.certificates-boxes
+		img
+			display block
+			height 50px
+			width 50px
 .agent-img
 	display block
 	float left
@@ -1698,6 +1716,7 @@ textarea
 		margin-bottom 10px
 	p
 		line-height 15px
+		word-wrap break-word
 	ul
 		padding-bottom 10px
 		li
@@ -1741,6 +1760,7 @@ textarea
 		width 49px
 		&.distance
 			background-position icoDistance
+			height 97px
 			margin-left 3px
 			width 66px
 	&:last-child

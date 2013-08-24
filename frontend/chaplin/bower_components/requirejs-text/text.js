@@ -139,9 +139,14 @@ define(['module'], function (module) {
             uPort = uHostName[1];
             uHostName = uHostName[0];
 
+            //console.log('uHostName: '+uHostName);
+
+            //return true;
+            
             return (!uProtocol || uProtocol === protocol) &&
                    (!uHostName || uHostName.toLowerCase() === hostname.toLowerCase()) &&
                    ((!uPort && !uHostName) || uPort === port);
+            
         },
 
         finishLoad: function (name, strip, content, onLoad) {

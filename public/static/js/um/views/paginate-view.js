@@ -2,7 +2,7 @@
 var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-define(['views/base/view', 'text!templates/paginate-mail.hbs'], function(View, template) {
+define(['chaplin', 'views/base/view', 'text!templates/paginate-mail.hbs', 'lib/utils'], function(Chaplin, View, template, Utils) {
   'use strict';
   var PaginateView, _ref;
   return PaginateView = (function(_super) {
@@ -17,7 +17,73 @@ define(['views/base/view', 'text!templates/paginate-mail.hbs'], function(View, t
 
     PaginateView.prototype.region = "paginate";
 
-    template = null;
+    PaginateView.prototype.pagTotal = 0;
+
+    PaginateView.prototype.pagPaginate = 0;
+
+    PaginateView.prototype.pagPages = 0;
+
+    PaginateView.prototype.pagPage = 0;
+
+    PaginateView.prototype.params = {};
+
+    PaginateView.prototype.initialize = function(object) {
+      this.params = object.params;
+      this.pagTotal = this.model.get("total");
+      this.pagPaginate = this.model.get("pagination");
+      this.pagPage = parseFloat(this.model.get("page"));
+      this.calcTotalPage();
+      this.calcPaginate();
+      if (this.pagPage > this.pagPages || this.pagPage <= 0) {
+        this.publishEvent('!router:route', Chaplin.helpers.reverse("index#show", [1]));
+      }
+      this.subscribeEvent('PaginateView:render', this.updatePaginate);
+      return PaginateView.__super__.initialize.apply(this, arguments);
+    };
+
+    PaginateView.prototype.updatePaginate = function() {
+      this.pagTotal = Chaplin.mediator.pages;
+      this.model.set("total", this.pagTotal);
+      this.calcTotalPage();
+      this.calcPaginate();
+      return this.render();
+    };
+
+    PaginateView.prototype.calcTotalPage = function() {
+      this.pagPages = Utils.caldivExc(this.pagTotal, this.pagPaginate);
+      return this.model.set("totalPage", this.pagPages);
+    };
+
+    PaginateView.prototype.calcPaginate = function() {
+      var arrNext, arrPrevious, name, pagNext, pagPrevious, rangeFinish, rangeInit;
+      pagNext = this.pagPage + 1;
+      pagPrevious = this.pagPage - 1;
+      arrPrevious = [pagPrevious];
+      arrNext = [pagNext];
+      rangeInit = pagPrevious === 0 ? 1 : pagPrevious * this.pagPaginate;
+      rangeFinish = pagNext > this.pagPages ? this.pagTotal : pagNext * this.pagPaginate;
+      this.model.set("interval", rangeInit + "-" + rangeFinish);
+      if (typeof this.params.search !== "undefined") {
+        name = "search";
+        arrPrevious.push(this.params.search);
+        arrNext.push(this.params.search);
+      } else {
+        name = "index#show";
+      }
+      if (pagPrevious > 0) {
+        this.model.set("isPrevious", false);
+        this.model.set("urlPrevious", Chaplin.helpers.reverse(name, arrPrevious));
+      }
+      if (pagNext > this.pagPages) {
+        if (pagPrevious > 0) {
+          this.model.set("isPrevious", false);
+        }
+        this.model.set("isNext", true);
+        return this.model.set("urlNext", "javascript:;");
+      } else {
+        return this.model.set("urlNext", Chaplin.helpers.reverse(name, arrNext));
+      }
+    };
 
     return PaginateView;
 

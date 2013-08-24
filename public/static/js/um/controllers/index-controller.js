@@ -2,7 +2,7 @@
 var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-define(['controllers/base/controller'], function(Controller) {
+define(['chaplin', 'controllers/base/controller', 'models/message', 'views/message/message-list-collection-view', 'views/message/message-detail-collection-view', 'models/base/collection'], function(Chaplin, Controller, Message, MessageListCollectionView, MessageDetailCollectionView, Collection) {
   'use strict';
   var IndexController, _ref;
   return IndexController = (function(_super) {
@@ -13,18 +13,68 @@ define(['controllers/base/controller'], function(Controller) {
       return _ref;
     }
 
-    IndexController.prototype.selectorTitle = '.head-adm h2';
+    IndexController.prototype._listMail = function(params) {
+      var _this = this;
+      this.messageList = new Message;
+      this.messages = new Collection(null, {
+        model: Message
+      });
+      this.messages.url = this.messageList.url();
+      this.messages.parse = function(response) {
+        if (response.data.src.data === void 0) {
+          return console.log('no hay data');
+        } else {
+          Chaplin.mediator.pages = response.data.src.total;
+          this.publishEvent('PaginateView:render');
+          return $.parseJSON(response.data.src.data);
+        }
+      };
+      this.messagesListView = new MessageListCollectionView({
+        collection: this.messages,
+        region: 'listEmail'
+      });
+      utils.loader($(".ctn-listmail"), true);
+      return this.messages.fetch({
+        data: $.param(params)
+      }).then(function() {
+        return utils.loader($(".ctn-listmail"), false);
+      });
+    };
+
+    IndexController.prototype._refreshSearch = function(params, route) {
+      if (route.name === "search" && $.trim(params.search) !== "") {
+        $('#txtSearch').val(params.search);
+        return $('#spaClose').fadeIn();
+      }
+    };
 
     IndexController.prototype.index = function(params) {
-      return console.log('index!');
+      return this.redirectToRoute("index#show", [1]);
+    };
+
+    IndexController.prototype.show = function(params, routes) {
+      this._listMail(params);
+      return this._refreshSearch(params, routes);
     };
 
     IndexController.prototype.message = function(params) {
-      return console.log('message!');
-    };
-
-    IndexController.prototype.search = function(params) {
-      return $(this.selectorTitle).html('Mensajes - Buscando: ' + params.keyword);
+      this.messageDetail = new Message;
+      console.log(this);
+      this.messagesDetail = new Collection(null, {
+        model: Message
+      });
+      this.messagesDetail.url = this.messageDetail.urlDetail(params.id);
+      this.messagesDetail.parse = function(response) {
+        console.log($.parseJSON(response.data.src.data));
+        return $.parseJSON(response.data.src.data);
+      };
+      this.messageDetailView = new MessageDetailCollectionView({
+        collection: this.messagesDetail,
+        region: 'message'
+      });
+      return this.messagesDetail.fetch().then = function(data) {
+        return console.log(data);
+      };
     };
 
     return IndexController;

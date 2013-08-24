@@ -16,7 +16,13 @@ define(['chaplin', 'models/base/model'], function(Chaplin, Model) {
     PaginateModel.prototype.defaults = {
       page: 1,
       pagination: Urbmail.page,
-      total: Urbmail.totalmsg
+      total: Chaplin.mediator.pages,
+      totalPage: 0,
+      interval: "",
+      isNext: false,
+      isPrevious: true,
+      urlNext: "javascript:;",
+      urlPrevious: "javascript:;"
     };
 
     return PaginateModel;

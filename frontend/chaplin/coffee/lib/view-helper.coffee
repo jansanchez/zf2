@@ -8,14 +8,20 @@ define [
   # Application-specific Handlebars helpers
   # ---------------------------------------
 
-  Handlebars.registerHelper 'pageState', (page,total) ->
-    page++
 
-  Handlebars.registerHelper 'pageNext', (page,total) ->
-    page++
+  #View helper que resuelve las rutas del Paginate
+  Handlebars.registerHelper 'urlPage', (routeName, page, crit) ->
+    if crit=="previous" then page-- else page++
+    Chaplin.helpers.reverse routeName, [page]
 
   # Get Chaplin-declared named routes. {{#url "like" "105"}}{{/url}}
   Handlebars.registerHelper 'url', (routeName, params..., options) ->
     Chaplin.helpers.reverse routeName, params
-
-  null
+    
+  # Debug the vars
+  Handlebars.registerHelper 'debug', (optionalValue) ->
+    console.log "Contexto actual::"
+    console.info "this"
+    if optionalValue
+      console.log "Value::"
+      console.info optionalValue

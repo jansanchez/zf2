@@ -10,10 +10,9 @@ define [
   # Delegate to Chaplin’s utils module
   utils = Chaplin.utils.beget Chaplin.utils
 
-  # Add additional application-specific properties and methods
-
-  # _(utils).extend
-  #   someProperty: 'foo'
-  #   someMethod: ->
+  _.extend utils,
+    caldivExc: (dividendo,divisor) ->
+      residuo= dividendo%divisor
+      if residuo!=0 then ((dividendo-residuo)/divisor)+1 else dividendo/divisor
 
   utils

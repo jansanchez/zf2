@@ -3,5 +3,16 @@ define(['underscore', 'chaplin'], function(_, Chaplin) {
   'use strict';
   var utils;
   utils = Chaplin.utils.beget(Chaplin.utils);
+  _.extend(utils, {
+    caldivExc: function(dividendo, divisor) {
+      var residuo;
+      residuo = dividendo % divisor;
+      if (residuo !== 0) {
+        return ((dividendo - residuo) / divisor) + 1;
+      } else {
+        return dividendo / divisor;
+      }
+    }
+  });
   return utils;
 });

@@ -2,7 +2,7 @@
 var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-define(['chaplin', 'views/layout-view', 'views/paginate-view', 'models/paginate', 'views/page-view', 'views/message-view'], function(Chaplin, LayoutView, PaginateView, Paginate, PageView, MessageView) {
+define(['chaplin', 'views/layout-view', 'views/paginate-view', 'models/paginate'], function(Chaplin, LayoutView, PaginateView, Paginate) {
   'use strict';
   var Controller, _ref;
   return Controller = (function(_super) {
@@ -14,18 +14,12 @@ define(['chaplin', 'views/layout-view', 'views/paginate-view', 'models/paginate'
     }
 
     Controller.prototype.beforeAction = function(params, route) {
-      var jsPage, _this;
+      var _this;
       _this = this;
       this.compose('layout', LayoutView);
-      jsPage = route.name === "index#page" ? params : {};
       this.compose('paginate', PaginateView, {
-        model: new Paginate(jsPage)
-      });
-      this.compose('page', PageView, {
-        region: 'page'
-      });
-      this.compose('message', MessageView, {
-        region: 'message'
+        model: new Paginate(params),
+        params: params
       });
       if (route.name === "index#message") {
         return require(['views/paginate-message-view'], function(PaginateMessageView) {

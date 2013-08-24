@@ -13,6 +13,8 @@ define(['views/base/view', 'text!templates/message-mail.hbs'], function(View, te
       return _ref;
     }
 
+    MessageView.prototype.autoRender = true;
+
     MessageView.prototype.template = template;
 
     template = null;
