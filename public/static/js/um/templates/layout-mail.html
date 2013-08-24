@@ -1,0 +1,53 @@
+<div class="head-adm">
+  <h2 class="mb10">Mensajes</h2>
+  <form class="filter-adm" id="frmSearch" name="frmSearch" onsubmit="return false;">
+    <div class="controls">
+      <input type="text" placeholder="Busca Mensaje" id="txtSearch" name="txtSearch">
+      <label class="vglass" for="txtSearch"></label>
+      <span id="spaClose" style="color: #333333;cursor: pointer;display: none;float: right;font-size: 15px;font-weight: 700;height: 15px;margin: 0 7px 0 0;position: absolute;right: 0;top: 9px;width: 11px;font-family: sans-serif;">X</span>
+    </div>
+    <div class="controls">
+      <button id="btnSearch" class="btn-urb btn-small" type="button" title="Buscar">Buscar</button>
+    </div>
+  </form>
+</div>
+<div class="opts-hadmin row">
+  <div class="box-left">
+    <div class="btn-group">
+      <a class="dropdown-toggle" href="javascript:;" id="ancSelect">
+        <input type="checkbox" id="chkSelect" name="chkSelect">
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="javascript:;" class="chkAll">Todo</a></li>
+        <li><a href="javascript:;" class="chkNone">Nada</a></li>
+        <!--
+        <li><a href="javascript:;">Leído</a></li>
+        <li><a href="javascript:;">No Leído</a></li>
+        -->
+      </ul>
+    </div>
+    <div class="btn-group">
+      <a class="dropdown-toggle" href="javascript:;" id="ancFilter"><span class="icon-filter"></span><span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="javascript:;" class="unread-filter">No leídos</a></li>
+        <li><a href="javascript:;" class="read-filter">Leídos</a></li>
+        <li><a href="javascript:;" class="important-filter">Importantes</a></li>
+      </ul>
+    </div>
+    <a class="btn-gray" title="Actualizar" href="javascript:;" class="filter-update"><span class="update">Actualizar</span></a>
+    <a class="btn-gray" title="Marcar como no leídos" href="javascript:;" class="filter-unread"><span class="unread">No Leídos</span></a>
+    <a class="btn-gray" title="Marcar como leídos" href="javascript:;"><span class="read" class="filter-read">Leídos</span></a>
+    <a class="btn-gray" title="Eliminar" href="javascript:;" class="correo-delete"><span class="delete">Eliminar</span></a>
+  </div>
+  <div class="box-rigth mail-paginator"></div>
+</div>
+<div class="row">
+  <div class="grids-4 ctn-listmail">
+    <div class="ml-paginator"></div>
+    <div id='listEmail' class="row">
+      <div class="mlscroll"></div>
+    </div>
+  </div>
+  <div id="divDetMail" class="grids-8"></div>
+</div>
